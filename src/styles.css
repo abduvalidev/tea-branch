@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Mulish Font */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+
+  body {
+    @apply font-inter bg-brand-black-100 text-brand-black-500
+  }
+}
+
+h2 {
+  @apply font-semibold text-28 lg:text-32
+}
+
+
+h3 {
+  @apply font-semibold text-xl lg:text-2xl
+}
+
+.button-green {
+  @apply bg-brand-green-400 text-white rounded transition duration-200 hover:bg-brand-green-500
+}
+
+.button-green-outline {
+  @apply border border-brand-black-200 rounded transition duration-200 hover:border-brand-black-400
+}
+
+
+.toggle-button::after {
+  height: calc(100% - 5px);
+  @apply absolute left-[3px] top-1/2 -translate-y-1/2 w-1/2 rounded border border-[#33C445] transition-all content-[''] peer-checked:translate-x-full peer-checked:-left-[3px]
+}
+
+.no-scroll::-webkit-scrollbar {
+  @apply h-0 w-0;
+}
+
+
+::-webkit-scrollbar {
+  @apply w-1.5 h-1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-brand-green-200;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-green-400 rounded-full;
+}
