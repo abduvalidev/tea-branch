@@ -14,17 +14,17 @@
   }
 
   body {
-    @apply font-inter bg-brand-black-100 text-brand-black-500
+    @apply font-inter tracking-wides bg-brand-black-100 text-brand-black-500
   }
 }
 
 h2 {
-  @apply font-semibold text-28 lg:text-32
+  @apply font-semibold !tracking-normal text-28 lg:text-32
 }
 
 
 h3 {
-  @apply font-semibold text-xl lg:text-2xl
+  @apply font-semibold -tracking-[-0.2%] text-xl lg:text-2xl
 }
 
 .button-green {

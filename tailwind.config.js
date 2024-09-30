@@ -30,7 +30,7 @@ module.exports = {
         30: "1.875rem",
         42: "2.625rem",
         50: "3.125rem",
-        60: "3.75rem",
+        sixty: "3.75rem",
         350: "21.875rem",
         base: "72.875rem",
       },
@@ -57,6 +57,9 @@ module.exports = {
             500: "#00B517",
           },
         },
+      },
+      letterSpacing: {
+        wides: "-0.0125rem"
       },
       boxShadow: {
         'inset-border-green': 'inset 0 0 0 2px #33C445',
