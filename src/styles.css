@@ -41,6 +41,43 @@ h3 {
   @apply absolute left-[3px] top-1/2 -translate-y-1/2 w-1/2 rounded border border-[#33C445] transition-all content-[''] peer-checked:translate-x-full peer-checked:-left-[3px]
 }
 
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  display: none;
+}
+
+[type="checkbox"]:checked+label,
+[type="checkbox"]:not(:checked)+label {
+  @apply relative inline-block cursor-pointer
+}
+
+[type="checkbox"]:checked+label:before,
+[type="checkbox"]:not(:checked)+label:before {
+  content: '';
+  @apply absolute left-0 right-0 size-4 bg-transparent border rounded-sm
+}
+
+[type="checkbox"]:checked+label:after,
+[type="checkbox"]:not(:checked)+label:after {
+  content: '';
+  @apply absolute size-2.5 bg-brand-green-400 rounded-sm
+}
+
+[type="checkbox"]:not(:checked)+label:after {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  @apply opacity-0
+}
+
+[type="checkbox"]:checked+label:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  @apply opacity-100
+}
+
+
+/* Scroll styles */
 .no-scroll::-webkit-scrollbar {
   @apply h-0 w-0;
 }
