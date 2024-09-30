@@ -645,9 +645,6 @@ body{
 .order-last{
   order: 9999;
 }
-.row-span-1{
-  grid-row: span 1 / span 1;
-}
 .-mx-4{
   margin-left: -1rem;
   margin-right: -1rem;
@@ -1737,6 +1734,12 @@ h3{
 @media (min-width: 640px){
 
 
+  .sm\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
   .sm\:mt-4{
     margin-top: 1rem;
   }
@@ -1769,11 +1772,6 @@ h3{
 
   .sm\:flex-row{
     flex-direction: row;
-  }
-
-
-  .sm\:items-center{
-    align-items: center;
   }
 
 
