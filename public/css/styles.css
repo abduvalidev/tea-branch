@@ -645,6 +645,9 @@ body{
 .order-last{
   order: 9999;
 }
+.row-span-1{
+  grid-row: span 1 / span 1;
+}
 .-mx-4{
   margin-left: -1rem;
   margin-right: -1rem;
@@ -972,6 +975,9 @@ body{
 }
 .flex-nowrap{
   flex-wrap: nowrap;
+}
+.items-start{
+  align-items: flex-start;
 }
 .items-center{
   align-items: center;
@@ -1763,6 +1769,11 @@ h3{
 
   .sm\:flex-row{
     flex-direction: row;
+  }
+
+
+  .sm\:items-center{
+    align-items: center;
   }
 
 
