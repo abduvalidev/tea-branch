@@ -49,7 +49,7 @@ h3 {
 
 [type="checkbox"]:checked+label,
 [type="checkbox"]:not(:checked)+label {
-  @apply relative inline-block cursor-pointer
+  @apply relative size-4 overflow-hidden inline-block cursor-pointer
 }
 
 [type="checkbox"]:checked+label:before,
@@ -61,7 +61,7 @@ h3 {
 [type="checkbox"]:checked+label:after,
 [type="checkbox"]:not(:checked)+label:after {
   content: '';
-  @apply absolute size-2.5 bg-brand-green-400 rounded-sm
+  @apply absolute left-1/2 !-translate-x-1/2 top-1/2 !-translate-y-1/2 size-2.5 bg-brand-green-400 rounded-[1px]
 }
 
 [type="checkbox"]:not(:checked)+label:after {
@@ -82,6 +82,9 @@ h3 {
   @apply h-0 w-0;
 }
 
+.card-scroll::-webkit-scrollbar {
+    @apply w-0.5
+}
 
 ::-webkit-scrollbar {
   @apply w-1.5 h-1;

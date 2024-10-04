@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Catalog</title>
+    <title>Каталог</title>
   </head>
 
   <body>
@@ -254,8 +254,7 @@
               </div>
             </div>
             <!-- Item 8 -->
-            <div
-              class="h-full bg-white text-center sm:text-left rounded-md p-3 lg:p-2 lg:pl-5">
+            <div class="h-full bg-white text-center sm:text-left rounded-md p-3 lg:p-2 lg:pl-5">
               <div class="flex flex-col-reverse sm:flex-row items-center sm:justify-between gap-3">
                 <p class="font-semibold text-15">Добавки</p>
                 <img class="size-10 lg:size-16" src="./img/icon-catalog__2.svg" alt="icon-catalog__2">
@@ -267,7 +266,18 @@
         <section class="pt-10 lg:pt-14">
           <!-- Title -->
           <div>
-            <h2>Второй заголовок</h2>
+            <div class="flex sm:items-center justify-between gap-5">
+              <h2>Второй заголовок</h2>
+              <!-- Filter Mobile -->
+              <button class="font-medium lg:hidden flex items-center">
+                <svg class="shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 14L10.9994 12M17 1H1V3.99957L7 8.49945V17L10.9994 15L10.9999 8.49951L17 3.99957V1Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Фильтры
+              </button>
+            </div>
             <div class="overflow-x-auto no-scroll flex items-center gap-1 whitespace-nowrap text-brand-black-400 mt-4">
               <!-- 1 -->
               <button class="h-6 bg-white flex items-center gap-1 rounded px-2">
@@ -295,15 +305,6 @@
                 <span class="text-13/4">Фруктовый</span>
               </button>
             </div>
-            <!--  -->
-            <button class="font-medium lg:hidden flex items-center mt-3">
-              <svg class="shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 14L10.9994 12M17 1H1V3.99957L7 8.49945V17L10.9994 15L10.9999 8.49951L17 3.99957V1Z"
-                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              Фильтры
-            </button>
           </div>
 
           <div class="flex gap-30 mt-4 lg:mt-6">
@@ -801,32 +802,135 @@
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
             <!-- Filters -->
-            <div class="max-w-[15.9375rem] w-full h-40 bg-white text-[#2E2E2E] rounded-md pt-2.5">
-              <!-- 1 -->
+            <div
+              class="max-w-[15.9375rem] hidden lg:block w-full h-max bg-white text-[#2E2E2E] rounded-md px-4 pt-6 pb-4 lg:pb-6">
               <div>
-                <button class="w-full flex items-center justify-between rounded-md p-4">
-                  <span class="font-semibold text-sm">Категория</span>
-                  <svg class="shrink-0" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5.12109 0.496094C5.30339 0.332031 5.51302 0.25 5.75 0.25C5.98698 0.25 6.19661 0.332031 6.37891 0.496094L10.7539 4.87109C10.918 5.05339 11 5.26302 11 5.5C11 5.73698 10.918 5.94661 10.7539 6.12891C10.5716 6.29297 10.362 6.375 10.125 6.375C9.88802 6.375 9.67839 6.29297 9.49609 6.12891L5.75 2.35547L2.00391 6.12891C1.82161 6.29297 1.61198 6.375 1.375 6.375C1.13802 6.375 0.928385 6.29297 0.746094 6.12891C0.582031 5.94661 0.5 5.73698 0.5 5.5C0.5 5.26302 0.582031 5.05339 0.746094 4.87109L5.12109 0.496094Z"
-                      fill="#2E2E2E" />
-                  </svg>
-                </button>
-                <div class="px-4">
-                  <div class="cursor-pointer flex items-center gap-2">
-                    <input type="checkbox" id="test1" checked>
-                    <label for="test1"></label>
-                    <label for="test1" class="text-sm">Черный чай</label>
+                <!-- Filter 1 -->
+                <div>
+                  <button class="w-full flex items-center justify-between rounded-md pb-2">
+                    <span class="font-semibold text-sm">Категория</span>
+                    <svg class="shrink-0" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.12109 0.496094C5.30339 0.332031 5.51302 0.25 5.75 0.25C5.98698 0.25 6.19661 0.332031 6.37891 0.496094L10.7539 4.87109C10.918 5.05339 11 5.26302 11 5.5C11 5.73698 10.918 5.94661 10.7539 6.12891C10.5716 6.29297 10.362 6.375 10.125 6.375C9.88802 6.375 9.67839 6.29297 9.49609 6.12891L5.75 2.35547L2.00391 6.12891C1.82161 6.29297 1.61198 6.375 1.375 6.375C1.13802 6.375 0.928385 6.29297 0.746094 6.12891C0.582031 5.94661 0.5 5.73698 0.5 5.5C0.5 5.26302 0.582031 5.05339 0.746094 4.87109L5.12109 0.496094Z"
+                        fill="#2E2E2E" />
+                    </svg>
+                  </button>
+                  <div class="space-y-2 mt-2">
+                    <!-- 1 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test1" checked>
+                      <label for="test1"></label>
+                      <label for="test1" class="cursor-pointer text-sm/4">Черный чай</label>
+                    </div>
+                    <!-- 2 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test2">
+                      <label for="test2"></label>
+                      <label for="test2" class="cursor-pointer text-sm/4">Зеленый чай</label>
+                    </div>
+                    <!-- 3 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test3">
+                      <label for="test3"></label>
+                      <label for="test3" class="cursor-pointer text-sm/4">Улун</label>
+                    </div>
+                    <!-- 4 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test4">
+                      <label for="test4"></label>
+                      <label for="test4" class="cursor-pointer text-sm/4">Фруктовый</label>
+                    </div>
+                    <!-- 5 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test5">
+                      <label for="test5"></label>
+                      <label for="test5" class="cursor-pointer text-sm/4">Пуэр</label>
+                    </div>
+                    <!-- 6 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test6">
+                      <label for="test6"></label>
+                      <label for="test6" class="cursor-pointer text-sm/4">Добавки</label>
+                    </div>
                   </div>
+                </div>
+                <!-- Filter 2 -->
+                <div class="border-t mt-4 pt-2">
+                  <button class="w-full flex items-center justify-between rounded-md py-2">
+                    <span class="font-semibold text-sm">Тип чая</span>
+                    <svg class="shrink-0" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.12109 0.496094C5.30339 0.332031 5.51302 0.25 5.75 0.25C5.98698 0.25 6.19661 0.332031 6.37891 0.496094L10.7539 4.87109C10.918 5.05339 11 5.26302 11 5.5C11 5.73698 10.918 5.94661 10.7539 6.12891C10.5716 6.29297 10.362 6.375 10.125 6.375C9.88802 6.375 9.67839 6.29297 9.49609 6.12891L5.75 2.35547L2.00391 6.12891C1.82161 6.29297 1.61198 6.375 1.375 6.375C1.13802 6.375 0.928385 6.29297 0.746094 6.12891C0.582031 5.94661 0.5 5.73698 0.5 5.5C0.5 5.26302 0.582031 5.05339 0.746094 4.87109L5.12109 0.496094Z"
+                        fill="#2E2E2E" />
+                    </svg>
+                  </button>
+                  <div class="space-y-2 mt-2">
+                    <!-- 7 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test7" checked>
+                      <label for="test7"></label>
+                      <label for="test7" class="cursor-pointer text-sm/4">Листовой</label>
+                    </div>
+                    <!-- 8 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test8">
+                      <label for="test8"></label>
+                      <label for="test8" class="cursor-pointer text-sm/4">Прессованный</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Filter 3 -->
+                <div class="border-t mt-4 pt-2">
+                  <button class="w-full flex items-center justify-between rounded-md py-2">
+                    <span class="font-semibold text-sm">Наличие</span>
+                    <svg class="shrink-0" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.12109 0.496094C5.30339 0.332031 5.51302 0.25 5.75 0.25C5.98698 0.25 6.19661 0.332031 6.37891 0.496094L10.7539 4.87109C10.918 5.05339 11 5.26302 11 5.5C11 5.73698 10.918 5.94661 10.7539 6.12891C10.5716 6.29297 10.362 6.375 10.125 6.375C9.88802 6.375 9.67839 6.29297 9.49609 6.12891L5.75 2.35547L2.00391 6.12891C1.82161 6.29297 1.61198 6.375 1.375 6.375C1.13802 6.375 0.928385 6.29297 0.746094 6.12891C0.582031 5.94661 0.5 5.73698 0.5 5.5C0.5 5.26302 0.582031 5.05339 0.746094 4.87109L5.12109 0.496094Z"
+                        fill="#2E2E2E" />
+                    </svg>
+                  </button>
+                  <div class="space-y-2 mt-2">
+                    <!-- 9 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test9" checked>
+                      <label for="test9"></label>
+                      <label for="test9" class="cursor-pointer text-sm/4">Есть в наличии</label>
+                    </div>
+                    <!-- 10 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test10">
+                      <label for="test10"></label>
+                      <label for="test10" class="cursor-pointer text-sm/4">Под заказ</label>
+                    </div>
+                    <!-- 11 -->
+                    <div class="w-max cursor-pointer flex items-center gap-2">
+                      <input type="checkbox" id="test11">
+                      <label for="test11"></label>
+                      <label for="test11" class="cursor-pointer text-sm/4">Предзаказ (от 10 дней)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Click -->
+                <div class="text-center mt-4">
+                  <button class="button-green w-full !rounded-md font-medium text-sm lg:text-base/[1.125rem] px-5 py-3">
+                    Применить
+                  </button>
+                  <a class="block text-brand-black-300 text-sm transition duration-200 hover:text-brand-black-200 mt-4"
+                    href="#">
+                    Сбросить
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <!-- Paginatin -->
-          <div class="bg-white w-max h-8 lg:h-[2.375rem] flex items-center font-semibold text-center text-xs lg:text-15 border rounded-md overflow-hidden mt-5 lg:mt-10 mx-auto sm:mx-0">
+          <div
+            class="bg-white w-max h-8 lg:h-[2.375rem] flex items-center font-semibold text-center text-xs lg:text-15 border rounded-md overflow-hidden mt-5 lg:mt-10 mx-auto sm:mx-0">
             <!-- Previous -->
             <button
               class="text-brand-black-300 w-20 lg:w-24 h-42 transition duration-200 hover:bg-gray-100 border-r px-2.5 py-1">Previous</button>
