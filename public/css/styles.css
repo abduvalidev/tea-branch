@@ -801,6 +801,10 @@ body{
   width: 2rem;
   height: 2rem;
 }
+.size-\[7\.5rem\]{
+  width: 7.5rem;
+  height: 7.5rem;
+}
 .size-full{
   width: 100%;
   height: 100%;
@@ -944,6 +948,9 @@ body{
 }
 .max-w-\[43\.0625rem\]{
   max-width: 43.0625rem;
+}
+.max-w-\[45\.625rem\]{
+  max-width: 45.625rem;
 }
 .max-w-\[45rem\]{
   max-width: 45rem;
@@ -1629,10 +1636,10 @@ h3{
   background-color: transparent;
 }
 
-.checkbox-custom:checked {
-  border-color: #424242;
+.checkbox-custom:checked{
   --tw-border-opacity: 1;
-  border-color: rgb(27 27 31 / var(--tw-border-opacity))}
+  border-color: rgb(28 28 28 / var(--tw-border-opacity));
+}
 
 .checkbox-custom:checked::after {
   content: '';
@@ -1644,7 +1651,9 @@ h3{
   width: 0.75rem;
   height: 0.75rem;
   background-size: contain;
-  background-repeat: no-repeat}
+  background-repeat: no-repeat;
+  --tw-text-opacity: 1;
+  color: rgb(28 28 28 / var(--tw-text-opacity))}
 
 
 .toggle-button::after {
@@ -1672,7 +1681,7 @@ h3{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-/* Faqat .custom-checkbox class uchun amal qiladi */
+
 .custom-checkbox:checked,
 .custom-checkbox:not(:checked) {
   display: none;
@@ -2528,11 +2537,6 @@ h3{
   }
 
 
-  .lg\:pb-28{
-    padding-bottom: 1.75rem;
-  }
-
-
   .lg\:pb-5{
     padding-bottom: 1.25rem;
   }
@@ -2540,6 +2544,11 @@ h3{
 
   .lg\:pb-6{
     padding-bottom: 1.5rem;
+  }
+
+
+  .lg\:pb-twenty-eight{
+    padding-bottom: 1.75rem;
   }
 
 
@@ -2605,12 +2614,6 @@ h3{
   }
 
 
-  .lg\:text-28{
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-
-
   .lg\:text-2xl\/6{
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -2668,6 +2671,12 @@ h3{
   .lg\:text-sm\/4{
     font-size: 0.875rem;
     line-height: 1rem;
+  }
+
+
+  .lg\:text-twenty-eight{
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 
 

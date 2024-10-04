@@ -19,7 +19,7 @@
 }
 
 h2 {
-  @apply font-semibold !tracking-normal text-28 lg:text-32
+  @apply font-semibold !tracking-normal text-twenty-eight lg:text-32
 }
 
 
@@ -41,15 +41,14 @@ h3 {
 }
 
 .checkbox-custom:checked {
-  border-color: #424242;
-  @apply border-[#1B1B1F]
+  @apply border-brand-black-500
 }
 
 .checkbox-custom:checked::after {
   content: '';
   transform: translate(-50%, -50%);
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.285 6.708l-11.145 11.145-5.145-5.145 1.415-1.414 3.729 3.728 9.732-9.732z"/></svg>');
-  @apply bg-contain bg-no-repeat absolute top-1/2 left-1/2 size-3
+  @apply bg-contain bg-no-repeat absolute top-1/2 left-1/2 size-3 text-brand-black-500
 }
 
 
@@ -58,7 +57,7 @@ h3 {
   @apply absolute left-[3px] top-1/2 -translate-y-1/2 w-1/2 rounded border border-[#33C445] transition-all content-[''] peer-checked:translate-x-full peer-checked:-left-[3px]
 }
 
-/* Faqat .custom-checkbox class uchun amal qiladi */
+
 .custom-checkbox:checked,
 .custom-checkbox:not(:checked) {
   display: none;

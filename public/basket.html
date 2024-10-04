@@ -195,10 +195,24 @@
           <!-- Left -->
           <div>
             <h3>Корзина</h3>
-            <div>
-              <div class="flex items-center space-x-2">
-                <input type="checkbox" id="select-all" class="checkbox-custom">
-                <label for="select-all" class="custom-label">Выбрать все</label>
+            <div class="flex items-center gap-30 mt-4">
+              <div class="cursor-pointer flex items-center space-x-2">
+                <input type="checkbox" id="select-all" class="cursor-pointer checkbox-custom" checked>
+                <label for="select-all" class="cursor-pointer custom-label">Выбрать все</label>
+              </div>
+              <p class="text-sm lg:text-base text-brand-gray-900">Удалить выбранные</p>
+            </div>
+
+            <!-- Carts -->
+            <div class="w-full max-w-[45.625rem] mt-6">
+              <!-- Cart 1 -->
+              <div class="bg-white rounded-md p-4 cursor-pointer flex space-x-2">
+                <input type="checkbox" id="select-1" class="cursor-pointer checkbox-custom">
+                <label for="select-1" class="cursor-pointer custom-label">
+                  <div class="size-[7.5rem]">
+                    <img class="size-full object-cover" src="./img/image-product__1.png" alt="Product Image">
+                  </div>
+                </label>
               </div>
             </div>
           </div>
