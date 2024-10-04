@@ -36,45 +36,63 @@ h3 {
 }
 
 
+.checkbox-custom {
+  @apply inline-block relative appearance-none size-5 border rounded bg-transparent
+}
+
+.checkbox-custom:checked {
+  border-color: #424242;
+  @apply border-[#1B1B1F]
+}
+
+.checkbox-custom:checked::after {
+  content: '';
+  transform: translate(-50%, -50%);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.285 6.708l-11.145 11.145-5.145-5.145 1.415-1.414 3.729 3.728 9.732-9.732z"/></svg>');
+  @apply bg-contain bg-no-repeat absolute top-1/2 left-1/2 size-3
+}
+
+
 .toggle-button::after {
   height: calc(100% - 5px);
   @apply absolute left-[3px] top-1/2 -translate-y-1/2 w-1/2 rounded border border-[#33C445] transition-all content-[''] peer-checked:translate-x-full peer-checked:-left-[3px]
 }
 
-
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked) {
+/* Faqat .custom-checkbox class uchun amal qiladi */
+.custom-checkbox:checked,
+.custom-checkbox:not(:checked) {
   display: none;
 }
 
-[type="checkbox"]:checked+label,
-[type="checkbox"]:not(:checked)+label {
-  @apply relative size-4 overflow-hidden inline-block cursor-pointer
+.custom-checkbox:checked+label,
+.custom-checkbox:not(:checked)+label {
+  @apply relative size-4 overflow-hidden inline-block cursor-pointer;
 }
 
-[type="checkbox"]:checked+label:before,
-[type="checkbox"]:not(:checked)+label:before {
+.custom-checkbox:checked+label:before,
+.custom-checkbox:not(:checked)+label:before {
   content: '';
-  @apply absolute left-0 right-0 size-4 bg-transparent border rounded-sm
+  @apply absolute left-0 right-0 size-4 bg-transparent border rounded-sm;
 }
 
-[type="checkbox"]:checked+label:after,
-[type="checkbox"]:not(:checked)+label:after {
+.custom-checkbox:checked+label:after,
+.custom-checkbox:not(:checked)+label:after {
   content: '';
-  @apply absolute left-1/2 !-translate-x-1/2 top-1/2 !-translate-y-1/2 size-2.5 bg-brand-green-400 rounded-[1px]
+  @apply absolute left-1/2 !-translate-x-1/2 top-1/2 !-translate-y-1/2 size-2.5 bg-brand-green-400 rounded-[1px];
 }
 
-[type="checkbox"]:not(:checked)+label:after {
+.custom-checkbox:not(:checked)+label:after {
   -webkit-transform: scale(0);
   transform: scale(0);
-  @apply opacity-0
+  @apply opacity-0;
 }
 
-[type="checkbox"]:checked+label:after {
+.custom-checkbox:checked+label:after {
   -webkit-transform: scale(1);
   transform: scale(1);
-  @apply opacity-100
+  @apply opacity-100;
 }
+
 
 
 /* Scroll styles */
@@ -83,7 +101,7 @@ h3 {
 }
 
 .card-scroll::-webkit-scrollbar {
-    @apply w-0.5
+  @apply w-0.5
 }
 
 ::-webkit-scrollbar {
