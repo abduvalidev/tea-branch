@@ -19,7 +19,7 @@
 }
 
 h2 {
-  @apply font-semibold !tracking-normal text-twenty-eight lg:text-32
+  @apply font-semibold !tracking-normal text-2xl lg:text-32
 }
 
 
@@ -35,9 +35,18 @@ h3 {
   @apply border border-brand-black-200 rounded transition duration-200 hover:border-brand-black-400
 }
 
+/* Radio Input Styles */
+.cart-radio:checked+label div span {
+  @apply block;
+}
+
+.cart-radio:checked+label div,
+.cart-radio:checked~label {
+  @apply text-brand-red border-brand-red;
+}
 
 .checkbox-custom {
-  @apply inline-block relative appearance-none size-5 border rounded bg-transparent
+  @apply inline-block relative appearance-none min-w-5 size-5 border rounded bg-transparent
 }
 
 .checkbox-custom:checked {

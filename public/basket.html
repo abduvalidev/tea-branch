@@ -180,10 +180,12 @@
           </div>
         </div>
         <!-- Path -->
-        <div class="flex items-center gap-1 md:gap-2 text-xs sm:text-sm/4 mt-4 md:mt-6">
-          <span class="text-brand-black-300">Главная</span>
+        <div class="flex items-center gap-1  md:gap-2 text-xs sm:text-sm/4 mt-4 md:mt-6">
+          <span class="whitespace-nowrap text-brand-black-300">Главная</span>
+          <img src="./img/icon-pathgray.svg" alt="Path icon" />
+          <span class="whitespace-nowrap text-brand-black-300">Главная</span>
           <img src="./img/icon-pathblack.svg" alt="Path icon" />
-          <span class="line-clamp-1">Контакты</span>
+          <span class="line-clamp-1">Габа Улун</span>
         </div>
       </nav>
     </header>
@@ -191,31 +193,280 @@
     <!-- MAIN -->
     <main>
       <section class="max-w-base mx-auto mt-6 px-4 md:px-7">
-        <div>
+        <div
+          class="w-full max-w-[43.625rem] lg:max-w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-30 mx-auto lg:mx-0">
           <!-- Left -->
-          <div>
+          <div class="flex-1">
             <h3>Корзина</h3>
             <div class="flex items-center gap-30 mt-4">
               <div class="cursor-pointer flex items-center space-x-2">
                 <input type="checkbox" id="select-all" class="cursor-pointer checkbox-custom" checked>
                 <label for="select-all" class="cursor-pointer custom-label">Выбрать все</label>
               </div>
-              <p class="text-sm lg:text-base text-brand-gray-900">Удалить выбранные</p>
+              <button
+                class="text-sm lg:text-base text-brand-gray-900 transition duration-200 hover:text-brand-gray-400">Удалить
+                выбранные</button>
             </div>
 
             <!-- Carts -->
-            <div class="w-full max-w-[45.625rem] mt-6">
+            <div class="w-full max-w-[45.625rem] mt-6 space-y-2">
               <!-- Cart 1 -->
-              <div class="bg-white rounded-md p-4 cursor-pointer flex space-x-2">
-                <input type="checkbox" id="select-1" class="cursor-pointer checkbox-custom">
-                <label for="select-1" class="cursor-pointer custom-label">
-                  <div class="size-[7.5rem]">
-                    <img class="size-full object-cover" src="./img/image-product__1.png" alt="Product Image">
+              <div class="bg-white rounded-md p-4">
+                <div class="flex gap-4 mx-auto xs:mx-0">
+                  <div class="flex flex-col md:flex-row space-x-2">
+                    <input type="checkbox" id="select-1" class="cursor-pointer checkbox-custom">
+                    <label for="select-1" class="cursor-pointer custom-label">
+                      <div class="w-full min-w-[4.875rem] max-w-[7.5rem] aspect-square">
+                        <img class="size-full object-cover" src="./img/image-product__1.png" alt="Product Image">
+                      </div>
+                    </label>
                   </div>
-                </label>
+                  <div>
+                    <div>
+                      <h5 class="font-semibold text-base line-clamp-1 sm:line-clamp-none">
+                        Navy Blue Габа Улун <br>
+                        для примера в две строки
+                      </h5>
+                      <ul class="md:space-y-2 mt-2">
+                        <li>
+                          <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Размер упаковки: <span
+                              class="text-brand-black-500">50
+                              г</span></p>
+                        </li>
+                        <li>
+                          <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Тип доставки: <span
+                              class="text-brand-black-500">
+                              Под
+                              заказ</span></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Quantity Selector -->
+                    <div class="w-max h-8 flex items-center text-center border rounded overflow-hidden !mt-4">
+                      <button
+                        class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-r px-4 py-1">−</button>
+                      <span class="w-42 text-15 px-2.5">2</span>
+                      <button
+                        class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-l px-4 py-1">+</button>
+                    </div>
+                  </div>
+                  <div class="whitespace-nowrap flex flex-col items-end justify-between gap-5 ml-auto">
+                    <div class="text-right">
+                      <span class="text-sm/4 line-through text-brand-black-300">10 500 ₽</span>
+                      <p class="font-semibold text-xl lg:text-2xl text-brand-black-400">8 999 ₽</p>
+                    </div>
+                    <button class="transition duration-200 hover:text-brand-green-400">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 5L4.5 20C4.5 21.1046 5.39543 22 6.5 22H17.5C18.6046 22 19.5 21.1046 19.5 20V5"
+                          stroke="currentColor" stroke-width="1.5" />
+                        <path d="M10 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M14 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M2.5 5H21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path
+                          d="M7 5L7.22147 3.6712C7.3822 2.70683 8.21658 2 9.19425 2H12H14.8057C15.7834 2 16.6178 2.70683 16.7785 3.6712L17 5"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Cart 2 -->
+              <div class="bg-white rounded-md p-4">
+                <div class="flex gap-4 mx-auto xs:mx-0">
+                  <div class="flex flex-col md:flex-row space-x-2">
+                    <input type="checkbox" id="select-2" class="cursor-pointer checkbox-custom">
+                    <label for="select-2" class="cursor-pointer custom-label">
+                      <div class="w-full min-w-[4.875rem] max-w-[7.5rem] aspect-square">
+                        <img class="size-full object-cover" src="./img/image-product__1.png" alt="Product Image">
+                      </div>
+                    </label>
+                  </div>
+                  <div>
+                    <div>
+                      <h5 class="font-semibold text-base line-clamp-1 sm:line-clamp-none">
+                        Navy Blue Габа Улун <br>
+                        для примера в две строки
+                      </h5>
+                      <ul class="md:space-y-2 mt-2">
+                        <li>
+                          <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Размер упаковки: <span
+                              class="text-brand-black-500">50
+                              г</span></p>
+                        </li>
+                        <li>
+                          <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Тип доставки: <span
+                              class="text-brand-black-500">
+                              Под
+                              заказ</span></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Quantity Selector -->
+                    <div class="w-max h-8 flex items-center text-center border rounded overflow-hidden !mt-4">
+                      <button
+                        class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-r px-4 py-1">−</button>
+                      <span class="w-42 text-15 px-2.5">2</span>
+                      <button
+                        class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-l px-4 py-1">+</button>
+                    </div>
+                  </div>
+                  <div class="whitespace-nowrap flex flex-col items-end justify-between gap-5 ml-auto">
+                    <div class="text-right">
+                      <span class="text-sm/4 line-through text-brand-black-300">10 500 ₽</span>
+                      <p class="font-semibold text-xl lg:text-2xl text-brand-black-400">8 999 ₽</p>
+                    </div>
+                    <button class="transition duration-200 hover:text-brand-green-400">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 5L4.5 20C4.5 21.1046 5.39543 22 6.5 22H17.5C18.6046 22 19.5 21.1046 19.5 20V5"
+                          stroke="currentColor" stroke-width="1.5" />
+                        <path d="M10 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M14 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M2.5 5H21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path
+                          d="M7 5L7.22147 3.6712C7.3822 2.70683 8.21658 2 9.19425 2H12H14.8057C15.7834 2 16.6178 2.70683 16.7785 3.6712L17 5"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Cart 3 -->
+              <div class="bg-white rounded-md p-4">
+                <div class="flex gap-4 mx-auto xs:mx-0">
+                  <div class="flex flex-col md:flex-row space-x-2">
+                    <input type="checkbox" id="select-3" class="cursor-pointer checkbox-custom">
+                    <label for="select-3" class="cursor-pointer custom-label">
+                      <div class="w-full min-w-[4.875rem] max-w-[7.5rem] aspect-square">
+                        <img class="size-full object-cover" src="./img/image-product__1.png" alt="Product Image">
+                      </div>
+                    </label>
+                  </div>
+                  <div>
+                    <div>
+                      <h5 class="font-semibold text-base line-clamp-1 sm:line-clamp-none">
+                        Navy Blue Габа Улун <br>
+                        для примера в две строки
+                      </h5>
+                      <ul class="md:space-y-2 mt-2">
+                        <li>
+                          <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Размер упаковки: <span
+                              class="text-brand-black-500">50
+                              г</span></p>
+                        </li>
+                        <li>
+                          <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Тип доставки: <span
+                              class="text-brand-black-500">
+                              Под
+                              заказ</span></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Quantity Selector -->
+                    <div class="w-max h-8 flex items-center text-center border rounded overflow-hidden !mt-4">
+                      <button
+                        class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-r px-4 py-1">−</button>
+                      <span class="w-42 text-15 px-2.5">2</span>
+                      <button
+                        class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-l px-4 py-1">+</button>
+                    </div>
+                  </div>
+                  <div class="whitespace-nowrap flex flex-col items-end justify-between gap-5 ml-auto">
+                    <div class="text-right">
+                      <span class="text-sm/4 line-through text-brand-black-300">10 500 ₽</span>
+                      <p class="font-semibold text-xl lg:text-2xl text-brand-black-400">8 999 ₽</p>
+                    </div>
+                    <button class="transition duration-200 hover:text-brand-green-400">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 5L4.5 20C4.5 21.1046 5.39543 22 6.5 22H17.5C18.6046 22 19.5 21.1046 19.5 20V5"
+                          stroke="currentColor" stroke-width="1.5" />
+                        <path d="M10 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M14 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M2.5 5H21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        <path
+                          d="M7 5L7.22147 3.6712C7.3822 2.70683 8.21658 2 9.19425 2H12H14.8057C15.7834 2 16.6178 2.70683 16.7785 3.6712L17 5"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
+            <button
+              class="button-green w-full xs:w-max font-medium text-white text-sm lg:text-base/[1.125rem] !rounded-md px-6 py-2 lg:py-3 mt-6 lg:mt-10">
+              Вернуться в каталог
+            </button>
           </div>
+          <!-- Right -->
+          <form class="bg-white w-full lg:max-w-350 h-max rounded-md px-4 py-5">
+            <!-- Top -->
+            <div>
+              <h4 class="font-medium text-xl lg:text-2xl">Ваша корзина</h4>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-center justify-between gap-4">
+                  <p class="text-brand-black-400 text-sm lg:text-base">Количество товаров:</p>
+                  <span class="font-semibold lg:text-lg">4 шт.</span>
+                </li>
+                <li class="flex items-center justify-between gap-4">
+                  <p class="text-brand-black-400 text-sm lg:text-base">Сумма товаров:</p>
+                  <span class="font-semibold lg:text-lg">1676 ₽</span>
+                </li>
+                <li class="flex items-center justify-between gap-4">
+                  <p class="text-brand-black-400 text-sm lg:text-base">Размер скидки:</p>
+                  <span class="font-semibold lg:text-lg">676 ₽</span>
+                </li>
+                <li class="flex items-center justify-between gap-4">
+                  <p class="text-brand-black-400 text-sm lg:text-base">Бонусов будет начислено</p>
+                  <span class="font-semibold lg:text-lg">342</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Bottom -->
+            <div class="mt-4 lg:mt-6">
+              <div class="flex items-center justify-between gap-5">
+                <p class="text-sm lg:text-base text-brand-black-400">Итого к оплате: </p>
+                <span class="font-semibold text-xl lg:text-2xl">10 000 ₽</span>
+              </div>
+              <p class="font-semibold mt-5">Бонусные баллы</p>
+              <div class="h-20 flex gap-6 lg:gap-10 border rounded-md p-4 mt-4">
+                <div>
+                  <input type="radio" id="cart-radio-1" class="cart-radio hidden" checked name="cart-radio" />
+                  <label class="w-full flex gap-2 font-medium cursor-pointer rounded-lg" for="cart-radio-1">
+                    <div class="size-5 grid place-content-center border-[1.5px] border-brand-gray-400 rounded-full">
+                      <span class="size-2 hidden bg-brand-red rounded-full"></span>
+                    </div>
+                    <div>
+                      <p class="text-brand-black-500 font-medium">Получить</p>
+                      <span class="text-sm lg:text-base text-brand-gray-900">320 баллов</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" id="cart-radio-2" class="cart-radio hidden" checked name="cart-radio" />
+                  <label class="w-full flex gap-2 font-medium cursor-pointer rounded-lg" for="cart-radio-2">
+                    <div class="size-5 grid place-content-center border-[1.5px] border-brand-gray-400 rounded-full">
+                      <span class="size-2 hidden bg-brand-red rounded-full"></span>
+                    </div>
+                    <div>
+                      <p class="text-brand-black-500 font-medium">Списать</p>
+                      <span class="text-sm lg:text-base text-brand-gray-900">320 баллов</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <!-- Promocode -->
+              <div class="flex items-center relative mt-5">
+                <input type="text" id="phoneEmail"
+                  class="peer w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-3 px-2"
+                  required />
+                <label for="phoneEmail"
+                  class="bg-white absolute left-4 top-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-9 peer-focus:scale-90 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-90 peer-focus:px-2">
+                  <span class="text-sm/6 text-brand-gray-400">Промокод</span>
+                </label>
+                <img class="absolute right-2 size-4 lg:size-6" src="./img/icon-circle.svg" alt="">
+              </div>
+              <button class="button-green w-full xs:w-max lg:w-full !rounded-md px-6 py-2 lg:py-3 mt-4">Оформить заказ</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -268,35 +519,35 @@
             </div>
           </div>
           <!-- Main Wrapper -->
-          <div class="w-full max-w-[40.1875rem] flex flex-wrap sm:justify-between gap-5 text-brand-custom-gray">
+          <div class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
             <!-- 1 -->
             <div class="w-1/2 sm:w-auto">
               <h5 class="font-semibold">Покупателям</h5>
               <div class="flex flex-col gap-2 mt-4 lg:mt-6">
-                <a class="transition duration-200 hover:opacity-75" href="#">Оплата и доставка</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Возврат товаров</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Вопросы и ответы</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Программа лояльности</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Оплата и доставка</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Возврат товаров</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Вопросы и ответы</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Программа лояльности</a>
               </div>
             </div>
             <!-- 2 -->
             <div class="w-auto">
               <h5 class="font-semibold">О компании</h5>
               <div class="flex flex-col gap-2 mt-4 lg:mt-6">
-                <a class="transition duration-200 hover:opacity-75" href="#">История</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Новости</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Вакансии</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Контакты</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">История</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Новости</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Вакансии</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Контакты</a>
               </div>
             </div>
             <!-- 3 -->
             <div class="w-auto">
               <h5 class="font-semibold">Юридическая информация</h5>
               <div class="flex flex-col gap-2 mt-4 lg:mt-6">
-                <a class="transition duration-200 hover:opacity-75" href="#">Реквизиты организации</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Лицензии и сертификаты</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Пользовательское соглашение</a>
-                <a class="transition duration-200 hover:opacity-75" href="#">Политика конфиденциальности</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Реквизиты организации</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Лицензии и сертификаты</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Пользовательское соглашение</a>
+                <a class="transition duration-200 hover:text-brand-green-400" href="#">Политика конфиденциальности</a>
               </div>
             </div>
           </div>

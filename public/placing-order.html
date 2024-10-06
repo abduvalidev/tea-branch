@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Личный кабинет</title>
+    <title>Placing An Order</title>
   </head>
 
   <body>
@@ -180,10 +180,12 @@
           </div>
         </div>
         <!-- Path -->
-        <div class="flex items-center gap-1 md:gap-2 text-xs sm:text-sm/4 mt-4 md:mt-6">
-          <span class="text-brand-black-300">Главная</span>
+        <div class="flex items-center gap-1  md:gap-2 text-xs sm:text-sm/4 mt-4 md:mt-6">
+          <span class="whitespace-nowrap text-brand-black-300">Главная</span>
+          <img src="./img/icon-pathgray.svg" alt="Path icon" />
+          <span class="whitespace-nowrap text-brand-black-300">Главная</span>
           <img src="./img/icon-pathblack.svg" alt="Path icon" />
-          <span class="line-clamp-1">Контакты</span>
+          <span class="line-clamp-1">Габа Улун</span>
         </div>
       </nav>
     </header>
@@ -191,270 +193,155 @@
     <!-- MAIN -->
     <main>
       <section class="max-w-base mx-auto mt-6 px-4 md:px-7">
-        <h2>Личный кабинет</h2>
-        <!-- Orders -->
-        <div class="md:flex gap-30 mt-6">
+        <div
+          class="w-full max-w-[43.625rem] lg:max-w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-30 mx-auto lg:mx-0">
           <!-- Left -->
-          <div
-            class="hidden lg:block w-full max-w-64 h-max bg-white rounded-md text-sm lg:text-base text-brand-gray-900 py-3">
-            <a class="block bg-brand-green-100 py-2 px-4" href="#">
-              Мои заказы
-            </a>
-            <a class="block transition duration-200 hover:bg-brand-green-100 py-2 px-4" href="#">
-              Личные данные
-            </a>
-            <a class="block transition duration-200 hover:bg-brand-green-100 py-2 px-4" href="#">
-              Бонусные баллы
-            </a>
-            <a class="block transition duration-200 hover:bg-brand-green-100 py-2 px-4" href="#">
-              Избранное
-            </a>
-            <a class="block transition duration-200 hover:bg-brand-green-100 py-2 px-4" href="#">
-              Выйти
-            </a>
+          <div class="flex-1">
+            <h3>Корзина</h3>
+            <div class="inline-block bg-white text-base/4 rounded-md p-4 lg:px-6 mt-4">
+              Если Вы регистрировались ранее, пожалуйста,
+              <a class="text-brand-green-400 underline underline-offset-4 transition duration-200 hover:text-brand-green-500"
+                href="#">авторизуйтесь</a>
+            </div>
+            <!-- Recipient Details -->
+            <form class="bg-white text-base/4 rounded-md p-4 lg:p-6 mt-4">
+              <h5 class="font-medium text-brand-black-400 text-xl lg:text-2xl">Данные получателя</h5>
+              <div class="grid xs:grid-cols-2 gap-4 lg:gap-6 mt-4 lg:mt-8">
+                <div class="space-y-4">
+                  <div>
+                    <label class="text-brand-black-400 text-15">Фамилия Имя Отчество</label>
+                    <!-- Promocode -->
+                    <div class="relative mt-2">
+                      <input type="text" id="for-1" placeholder="Для примера"
+                        class="peer w-full h-38 border border-gray-200 text-sm/6 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                        required />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="text-brand-black-400 text-15">Электронная почта</label>
+                    <!-- Promocode -->
+                    <div class="relative mt-2">
+                      <input type="text" id="for-2" placeholder="Для примера"
+                        class="peer w-full h-38 border border-gray-200 text-sm/6 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                        required />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label class="text-brand-black-400 text-15">Комментарий к заказу</label>
+                  <!-- Promocode -->
+                    <div class="relative mt-2">
+                    <textarea placeholder="" type="text" id="for-3"
+                      class="peer w-full h-[7.5625rem] border border-gray-200 rounded-md focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="cursor-pointer flex items-center space-x-2 mt-4 lg:mt-8">
+                <input type="checkbox" id="select-all-2" class="cursor-pointer checkbox-custom" checked>
+                <label for="select-all-2" class="cursor-pointer custom-label">Создать личный кабинет</label>
+              </div>
+            </form>
           </div>
           <!-- Right -->
-          <div class="flex-1 bg-white rounded-md px-4 md:px-6 py-4">
-            <h3 class="text-[#1B1B1F] mb-0.5">История заказов</h3>
-            <!-- Order 1 -->
-            <div class="md:flex gap-4 lg:gap-x-6 border rounded-md p-4 md:px-5 md:py-6 mt-6 space-y-4 md:space-y-0">
-              <div class="md:flex-1">
-                <!-- Order Number -->
-                <p class="font-medium text-lg lg:text-xl/6">Заказ № 604 от 25.07.2022</p>
-                <div class="whitespace-nowrap overflow-x-auto no-scroll mt-2">
-                  <div class="flex items-center gap-2">
-                    <div class="bg-brand-black-100 flex items-center gap-1 rounded-md py-1 px-2">
-                      <div class="size-2 rounded-full bg-brand-green-400"></div>
-                      <span class="text-13/[1.125rem]">Доставлен</span>
-                    </div>
-                    <div class="bg-brand-black-100 flex items-center gap-1 rounded-md py-1 px-2">
-                      <div class="size-2 rounded-full bg-[#F9BD13]"></div>
-                      <span class="text-13/[1.125rem]">Ожидает доставку</span>
-                    </div>
-                    <div class="bg-brand-black-100 flex items-center gap-1 rounded-md py-1 px-2">
-                      <div class="size-2 rounded-full bg-[#FA3434]"></div>
-                      <span class="text-13/[1.125rem]">Отменен</span>
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-5">
+            <div class="bg-white w-full lg:max-w-350 h-max rounded-md px-4 py-5">
+              <h5 class="font-medium text-xl lg:text-2xl">Товаров в заказе: <span class="text-brand-gray-900">12</span>
+              </h5>
+              <!-- Carts -->
+              <div class="card-scroll h-[19.75rem] overflow-y-auto pr-5 lg:pr-10 mt-4 space-y-4">
+                <!-- Cart 1 -->
+                <div class="min-w-52 flex gap-2">
+                  <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
+                  <div class="flex-1">
+                    <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
+                    <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span class="text-brand-black-500">50
+                        г</span></p>
+                    <div class="flex items-center justify-between gap-3 mt-2">
+                      <span class="text-brand-gray-400 text-sm/6">1 шт</span>
+                      <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
                     </div>
                   </div>
                 </div>
-                <ul class="text-sm/4 space-y-4 mt-5">
-                  <li>
-                    <span class="text-brand-gray-400">Доставка:</span>
-                    <p class="mt-2">Самовывоз</p>
-                  </li>
-                  <li>
-                    <span class="text-brand-gray-400">Адрес получения:</span>
-                    <p class="mt-2">Краснодар, Московская 112/2, кв 435</p>
-                  </li>
-                  <li>
-                    <span class="text-brand-gray-400">Способ оплаты:</span>
-                    <p class="mt-2">СБП</p>
-                  </li>
-                  <li>
-                    <span class="text-brand-gray-400">Бонусы:</span>
-                    <p class="mt-2">Начислили 36 баллов</p>
-                  </li>
-                </ul>
-                <div class="flex flex-col xs:flex-row gap-3 font-medium text-sm lg:text-base/[1.125rem] mt-4">
-                  <button class="button-green w-full xs:w-auto !rounded-md px-6 py-2 lg:py-3">Повторить заказ</button>
-                  <button class="button-green-outline w-full xs:w-auto !rounded-md px-6 py-2 lg:py-3">Отменить</button>
-                </div>
-              </div>
-              <div class="md:max-w-80 md:w-full border-t md:border-t-0 md:border-l pt-4 md:pt-0 md:pl-4 lg:pl-6">
-                <div class="font-medium">
-                  <p class="text-right text-sm lg:text-base/[1.125rem] text-brand-black-300">Свернуть</p>
-                  <p class="text-sm lg:text-base/[1.2rem] mt-1">Товаров в заказе: <span class="font-semibold">12</span>
-                  </p>
-                </div>
-                <!-- Carts -->
-                <div class="card-scroll h-40 overflow-y-auto pr-5 mt-3.5 space-y-4">
-                  <!-- Cart 1 -->
-                  <div class="min-w-52 flex gap-2">
-                    <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
-                    <div class="flex-1">
-                      <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
-                      <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span
-                          class="text-brand-black-500">50
-                          г</span></p>
-                      <div class="flex items-center justify-between gap-3 mt-2">
-                        <span class="text-brand-gray-400 text-sm/6">1 шт</span>
-                        <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Cart 2 -->
-                  <div class="min-w-52 flex gap-2">
-                    <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
-                    <div class="flex-1">
-                      <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
-                      <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span
-                          class="text-brand-black-500">50
-                          г</span></p>
-                      <div class="flex items-center justify-between gap-3 mt-2">
-                        <span class="text-brand-gray-400 text-sm/6">1 шт</span>
-                        <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Cart 3 -->
-                  <div class="min-w-52 flex gap-2">
-                    <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
-                    <div class="flex-1">
-                      <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
-                      <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span
-                          class="text-brand-black-500">50
-                          г</span></p>
-                      <div class="flex items-center justify-between gap-3 mt-2">
-                        <span class="text-brand-gray-400 text-sm/6">1 шт</span>
-                        <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Cart 4 -->
-                  <div class="min-w-52 flex gap-2">
-                    <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
-                    <div class="flex-1">
-                      <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
-                      <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span
-                          class="text-brand-black-500">50
-                          г</span></p>
-                      <div class="flex items-center justify-between gap-3 mt-2">
-                        <span class="text-brand-gray-400 text-sm/6">1 шт</span>
-                        <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Cart 5 -->
-                  <div class="min-w-52 flex gap-2">
-                    <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
-                    <div class="flex-1">
-                      <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
-                      <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span
-                          class="text-brand-black-500">50
-                          г</span></p>
-                      <div class="flex items-center justify-between gap-3 mt-2">
-                        <span class="text-brand-gray-400 text-sm/6">1 шт</span>
-                        <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Cart 6 -->
-                  <div class="min-w-52 flex gap-2">
-                    <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
-                    <div class="flex-1">
-                      <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
-                      <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span
-                          class="text-brand-black-500">50
-                          г</span></p>
-                      <div class="flex items-center justify-between gap-3 mt-2">
-                        <span class="text-brand-gray-400 text-sm/6">1 шт</span>
-                        <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
-                      </div>
+                <!-- Cart 2 -->
+                <div class="min-w-52 flex gap-2">
+                  <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
+                  <div class="flex-1">
+                    <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
+                    <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span class="text-brand-black-500">50
+                        г</span></p>
+                    <div class="flex items-center justify-between gap-3 mt-2">
+                      <span class="text-brand-gray-400 text-sm/6">1 шт</span>
+                      <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
                     </div>
                   </div>
                 </div>
-                <!-- Ul -->
-                <ul class="font-mulish mt-8 lg:mt-14 space-y-2">
-                  <li class="flex items-center justify-between">
-                    <p class="text-xs">Стоимость доставки</p>
-                    <span class="font-medium text-sm/4">300 ₽</span>
-                  </li>
-                  <li class="flex items-center justify-between">
-                    <p class="text-xs">НДС</p>
-                    <span class="font-medium text-sm/4">300 ₽</span>
-                  </li>
-                  <li class="font-semibold text-brand-green-400 flex items-center justify-between">
-                    <p>Итого</p>
-                    <span class="font-medium">14 144 ₽</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Order 2 -->
-            <div class="md:flex gap-4 lg:gap-x-6 border rounded-md p-4 md:px-5 md:py-6 mt-4 space-y-4 md:space-y-0">
-              <div class="md:flex-1">
-                <!-- Top -->
-                <div class="flex flex-wrap justify-between gap-5">
-                  <div class="whitespace-nowrap overflow-x-auto no-scroll">
-                    <!-- Order Number -->
-                    <p class="font-medium text-lg lg:text-xl/6">Заказ № 604 от 25.07.2022</p>
-                    <div class="flex items-center gap-2 mt-2">
-                      <div class="bg-brand-black-100 flex items-center gap-1 rounded-md py-1 px-2">
-                        <div class="size-2 rounded-full bg-brand-green-400"></div>
-                        <span class="text-13/[1.125rem]">Доставлен</span>
-                      </div>
+                <!-- Cart 3 -->
+                <div class="min-w-52 flex gap-2">
+                  <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
+                  <div class="flex-1">
+                    <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
+                    <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span class="text-brand-black-500">50
+                        г</span></p>
+                    <div class="flex items-center justify-between gap-3 mt-2">
+                      <span class="text-brand-gray-400 text-sm/6">1 шт</span>
+                      <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
                     </div>
                   </div>
-                  <div class="sm:text-right">
-                    <p class="font-medium text-lg lg:text-xl">
-                      <span class="font-normal text-brand-gray-400 text-sm lg:text-base">12 Товаров на сумму:</span>
-                      23 000 ₽
-                    </p>
-                    <a class="text-brand-gray-400 text-sm underline transition duration-200 hover:text-brand-green-400" href="#">
-                      Подробнее
-                    </a>
+                </div>
+                <!-- Cart 4 -->
+                <div class="min-w-52 flex gap-2">
+                  <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
+                  <div class="flex-1">
+                    <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
+                    <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span class="text-brand-black-500">50
+                        г</span></p>
+                    <div class="flex items-center justify-between gap-3 mt-2">
+                      <span class="text-brand-gray-400 text-sm/6">1 шт</span>
+                      <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
+                    </div>
                   </div>
                 </div>
-                <!-- Bottom -->
-                <div class="flex flex-col sm:flex-row justify-between gap-4 md:gap-8 xl:gap-16 mt-5">
-                  <ul class="flex flex-wrap justify-between gap-4 md:gap-8 xl:gap-16 text-sm/4">
-                    <li>
-                      <span class="text-brand-gray-400">Адрес получения:</span>
-                      <p class="mt-2">Краснодар, Московская 112/2, кв 435</p>
-                    </li>
-                    <li>
-                      <span class="text-brand-gray-400">Бонусы:</span>
-                      <p class="mt-2">Начислили 36 баллов</p>
-                    </li>
-                  </ul>
-                  <button
-                    class="whitespace-nowrap button-green w-full xs:w-max h-max !rounded-md text-sm lg:text-base/[1.125rem] px-6 py-2 lg:py-3">Повторить
-                    заказ</button>
+                <!-- Cart 5 -->
+                <div class="min-w-52 flex gap-2">
+                  <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
+                  <div class="flex-1">
+                    <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
+                    <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span class="text-brand-black-500">50
+                        г</span></p>
+                    <div class="flex items-center justify-between gap-3 mt-2">
+                      <span class="text-brand-gray-400 text-sm/6">1 шт</span>
+                      <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Cart 6 -->
+                <div class="min-w-52 flex gap-2">
+                  <img class="shrink-0 size-10" src="./img/image-product__1.png" alt="image">
+                  <div class="flex-1">
+                    <p class="font-semibold text-sm lg:text-base/5">Navy Blue Габа Улун</p>
+                    <p class="text-brand-gray-400 text-sm/4 mt-1">Размер упаковки: <span class="text-brand-black-500">50
+                        г</span></p>
+                    <div class="flex items-center justify-between gap-3 mt-2">
+                      <span class="text-brand-gray-400 text-sm/6">1 шт</span>
+                      <p class="font-bold text-sm lg:text-base">17 700 ₽</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- Order 3 -->
-            <div class="md:flex gap-4 lg:gap-x-6 border rounded-md p-4 md:px-5 md:py-6 mt-4 space-y-4 md:space-y-0">
-              <div class="md:flex-1">
-                <!-- Top -->
-                <div class="flex flex-wrap justify-between gap-5">
-                  <div class="whitespace-nowrap overflow-x-auto no-scroll">
-                    <!-- Order Number -->
-                    <p class="font-medium text-lg lg:text-xl/6">Заказ № 604 от 25.07.2022</p>
-                    <div class="flex items-center gap-2 mt-2">
-                      <div class="bg-brand-black-100 flex items-center gap-1 rounded-md py-1 px-2">
-                        <div class="size-2 rounded-full bg-brand-green-400"></div>
-                        <span class="text-13/[1.125rem]">Доставлен</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sm:text-right">
-                    <p class="font-medium text-lg lg:text-xl">
-                      <span class="font-normal text-brand-gray-400 text-sm lg:text-base">12 Товаров на сумму:</span>
-                      23 000 ₽
-                    </p>
-                    <a class="text-brand-gray-400 text-sm underline transition duration-200 hover:text-brand-green-400" href="#">
-                      Подробнее
-                    </a>
-                  </div>
-                </div>
-                <!-- Bottom -->
-                <div class="flex flex-col sm:flex-row justify-between gap-4 md:gap-8 xl:gap-16 mt-5">
-                  <ul class="flex flex-wrap justify-between gap-4 md:gap-8 xl:gap-16 text-sm/4">
-                    <li>
-                      <span class="text-brand-gray-400">Адрес получения:</span>
-                      <p class="mt-2">Краснодар, Московская 112/2, кв 435</p>
-                    </li>
-                    <li>
-                      <span class="text-brand-gray-400">Бонусы:</span>
-                      <p class="mt-2">Начислили 36 баллов</p>
-                    </li>
-                  </ul>
-                  <button
-                    class="whitespace-nowrap button-green w-full xs:w-max h-max !rounded-md text-sm lg:text-base/[1.125rem] px-6 py-2 lg:py-3">Повторить
-                    заказ</button>
-                </div>
-              </div>
+            <div class="bg-white w-full lg:max-w-350 h-max rounded-md px-4 py-5">
+              <p class="text-brand-darks text-15">
+                Если у вас возникли вопросы при оформлении заказа, продолжите его оформление с менеджером, оформив
+                быстрый
+                заказ.
+                <br><br>
+                Или свяжитесь с нами
+                для консультации.
+              </p>
+              <a class="block font-bold lg:text-xl/6 transition duration-200 hover:text-brand-green-400 mt-4 lg:mt-6"
+                href="#">
+                8 (800) 000-00-00
+              </a>
             </div>
           </div>
         </div>
@@ -509,7 +396,8 @@
             </div>
           </div>
           <!-- Main Wrapper -->
-          <div class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
+          <div
+            class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
             <!-- 1 -->
             <div class="w-1/2 sm:w-auto">
               <h5 class="font-semibold">Покупателям</h5>
