@@ -132,12 +132,12 @@ h3 {
 }
 
 ::-webkit-scrollbar {
-  @apply w-1.5 h-1;
+  @apply w-0.5 md:w-1.5 h-1;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-brand-green-200;
+  @apply bg-brand-green-200 rounded-full;
 }
 
 /* Handle */
