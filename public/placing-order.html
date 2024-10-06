@@ -205,7 +205,7 @@
             </div>
             <!-- Recipient Details -->
             <form class="bg-white text-base/4 rounded-md p-4 lg:p-6 mt-4">
-              <h5 class="font-medium text-brand-black-400 text-xl lg:text-2xl">Данные получателя</h5>
+              <h3 class="font-medium text-brand-black-400">Данные получателя</h3>
               <div class="grid xs:grid-cols-2 gap-4 lg:gap-6 mt-4 lg:mt-8">
                 <div class="space-y-4">
                   <div>
@@ -230,7 +230,7 @@
                 <div>
                   <label class="text-brand-black-400 text-15">Комментарий к заказу</label>
                   <!-- Promocode -->
-                    <div class="relative mt-2">
+                  <div class="relative mt-2">
                     <textarea placeholder="" type="text" id="for-3"
                       class="peer w-full h-[7.5625rem] border border-gray-200 rounded-md focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"></textarea>
                   </div>
@@ -241,6 +241,240 @@
                 <label for="select-all-2" class="cursor-pointer custom-label">Создать личный кабинет</label>
               </div>
             </form>
+            <!-- Recipient Details -->
+            <form class="bg-white text-base/4 rounded-md p-4 lg:p-6 mt-5">
+              <h3 class="font-medium text-brand-black-400">Доставка</h3>
+              <div class="grid xs:grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-10">
+                <div>
+                  <h6 class="mb-6">Город получения</h6>
+                  <!-- Promocode -->
+                  <label for="for2-2" class="text-brand-black-400 text-15">Город</label>
+                  <div class="relative mt-2">
+                    <input type="text" id="for2-2" placeholder="Для примера"
+                      class="peer w-full h-38 border border-gray-200 text-15 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                      required />
+                    <button
+                      class="absolute top-1/2 -translate-y-1/2 right-2.5 text-brand-green-400 text-15 transition duration-200 hover:text-opacity-80">
+                      Изменить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 lg:mt-10">
+                <h6 class="lg:text-xl/6 mb-6">Способ получения</h6>
+                <div class="grid xs:grid-cols-2 gap-y-4 lg:gap-y-6 gap-x-6 md:gap-x-8">
+                  <!-- Radio 1 -->
+                  <div>
+                    <input type="radio" id="radio-1" class="cart-radio hidden" checked name="cart-radio" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="radio-1">
+                      <p class="font-medium text-brand-black-500">DPD</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-green-400 rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">Служба доставки DPD</p>
+                      <div class="w-full flex items-center justify-between gap-3">
+                        <p class="text-brand-black-400">Рассчитывается отдельно </p>
+                        <span class="whitespace-nowrap text-brand-green-400">3-5 дней</span>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Radio 2 -->
+                  <div>
+                    <input type="radio" id="radio-2" class="cart-radio hidden" checked name="cart-radio" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="radio-2">
+                      <p class="font-medium text-brand-black-500">Почта россии</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-green-400 rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">EMS до двери</p>
+                      <div class="w-full flex items-center justify-between gap-3">
+                        <p class="text-brand-black-400">от 300 ₽</p>
+                        <span class="whitespace-nowrap text-brand-green-400">3-5 дней</span>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Radio 3 -->
+                  <div>
+                    <input type="radio" id="radio-3" class="cart-radio hidden" checked name="cart-radio" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="radio-3">
+                      <p class="font-medium text-brand-black-500">CDEK</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-green-400 rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">Доставка курьером по адресу</p>
+                      <div class="w-full flex items-center justify-between gap-3">
+                        <p class="text-brand-black-400">Рассчитывается отдельно </p>
+                        <span class="whitespace-nowrap text-brand-green-400">3-5 дней</span>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Radio 4 -->
+                  <div>
+                    <input type="radio" id="radio-4" class="cart-radio hidden" checked name="cart-radio" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="radio-4">
+                      <p class="font-medium text-brand-black-500">Самовывоз</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-green-400 rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">Самостоятельно со склада</p>
+                      <div class="w-full flex items-center justify-between gap-3">
+                        <p class="text-brand-black-400">Бесплатно</p>
+                        <span class="whitespace-nowrap text-brand-green-400">3-5 дней</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid xs:grid-cols-2 gap-4 lg:gap-6 mt-4 lg:mt-8">
+                <div class="space-y-4">
+                  <h6 class="lg:text-xl/6 mb-6">Адрес получения</h6>
+                  <div>
+                    <label class="text-brand-black-400 text-15">Индекс</label>
+                    <!-- Promocode -->
+                    <div class="relative mt-2">
+                      <input type="text" id="index" placeholder="Для примера"
+                        class="peer w-full h-38 border border-gray-200 text-sm/6 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                        required />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="text-brand-black-400 text-15">Точный адрес</label>
+                    <!-- Promocode -->
+                    <div class="relative mt-2">
+                      <input type="text" id="adres" placeholder="Для примера"
+                        class="peer w-full h-38 border border-gray-200 text-sm/6 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                        required />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="text-brand-black-400 text-15">Телефон</label>
+                    <!-- Promocode -->
+                    <div class="relative mt-2">
+                      <input type="text" id="phone" placeholder="Для примера"
+                        class="peer w-full h-38 border border-gray-200 text-sm/6 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                        required />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+            <!-- Details -->
+            <form class="bg-white text-base/4 rounded-md p-4 lg:p-6 mt-5">
+              <div>
+                <h6 class="lg:text-xl/6 mb-6">Оплата</h6>
+                <div class="grid xs:grid-cols-2 gap-y-4 lg:gap-y-6 gap-x-6 md:gap-x-8">
+                  <!-- Radio 1 -->
+                  <div>
+                    <input type="radio" id="bottom-radio-1" class="radio-dark hidden" checked name="radio-dark" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full h-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="bottom-radio-1">
+                      <p class="font-medium text-brand-black-500 lg:text-xl">Квитанция банка</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-dark rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">
+                        Для оплаты в любом <br>
+                        отделении банка
+                      </p>
+                    </label>
+                  </div>
+                  <!-- Radio 2 -->
+                  <div>
+                    <input type="radio" id="bottom-radio-2" class="radio-dark hidden" checked name="radio-dark" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full h-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="bottom-radio-2">
+                      <p class="font-medium text-brand-black-500 lg:text-xl">Картой онлайн</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-dark rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">
+                        Оплата заказа онлайн <br> через сервис ______
+                      </p>
+                    </label>
+                  </div>
+                  <!-- Radio 3 -->
+                  <div>
+                    <input type="radio" id="bottom-radio-3" class="radio-dark hidden" checked name="radio-dark" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full h-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="bottom-radio-3">
+                      <p class="font-medium text-brand-black-500 lg:text-xl">Наличными</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-dark rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">
+                        Наличными курьеру <br>
+                        или в пункте самовывоза
+                      </p>
+                    </label>
+                  </div>
+                  <!-- Radio 4 -->
+                  <div>
+                    <input type="radio" id="bottom-radio-4" class="radio-dark hidden" checked name="radio-dark" />
+                    <label
+                      class="border rounded-md text-sm lg:text-base/4 w-full h-full flex flex-wrap items-center justify-between gap-3 lg:gap-6 cursor-pointer p-4 lg:py-6"
+                      for="bottom-radio-4">
+                      <p class="font-medium text-brand-black-500 lg:text-xl">Счет на опталу</p>
+                      <div
+                        class="shrink-0 size-5 grid place-content-center border-[1.5px] border-brand-black-500 rounded-full">
+                        <span class="shrink-0 size-2 hidden bg-brand-dark rounded-full"></span>
+                      </div>
+                      <p class="w-full text-brand-black-300 text-base/4">
+                        Выставим счет <br>
+                        для ИП или ЮР лица
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="mt-5">
+              <ul class="space-y-4">
+                <div class="flex items-center justify-between gap-4 border-b pb-2">
+                  <p class="text-base/4 text-brand-black-300">Товаров на сумму:</p>
+                  <span class="lg:text-xl/6">3 200 ₽</span>
+                </div>
+                <div class="flex items-center justify-between gap-4 border-b pb-2">
+                  <p class="text-base/4 text-brand-black-300">Доставка:</p>
+                  <span class="lg:text-xl/6">300 ₽</span>
+                </div>
+                <div class="flex items-center justify-between gap-4 pb-2">
+                  <p class="text-base/4 text-brand-black-300">Итого:</p>
+                  <span class="font-bold lg:text-2xl/6">20 000 ₽</span>
+                </div>
+              </ul>
+              <div class="flex flex-wrap items-center justify-between gap-4 mt-6 lg:mt-10">
+                <div class="cursor-pointer flex items-center space-x-2">
+                  <input type="checkbox" id="dBy-1" class="cursor-pointer checkbox-custom" checked>
+                  <label for="dBy-1" class="max-w-96 cursor-pointer custom-label text-sm/4">Нажимая кнопку «Оформить
+                    заказ», я даю
+                    свое согласие на обработку моих персональных данных</label>
+                </div>
+                <button
+                  class="button-green w-full xs:w-auto h-max !rounded-md font-medium text-base/[1.125rem] py-2 lg:py-3 px-6 lg:px-10">
+                  Оформить заказ
+                </button>
+              </div>
+            </div>
           </div>
           <!-- Right -->
           <div class="flex flex-col sm:flex-row lg:flex-col gap-5">

@@ -36,13 +36,29 @@ h3 {
 }
 
 /* Radio Input Styles */
+.cart-radio:checked+label div {
+  @apply border-brand-green-400;
+}
 .cart-radio:checked+label div span {
   @apply block;
 }
 
 .cart-radio:checked+label div,
 .cart-radio:checked~label {
-  @apply text-brand-red border-brand-red;
+  @apply text-brand-green-400;
+}
+
+/* 2 */
+.radio-dark:checked+label div {
+  @apply border-brand-dark;
+}
+.radio-dark:checked+label div span {
+  @apply block;
+}
+
+.radio-dark:checked+label div,
+.radio-dark:checked~label {
+  @apply text-brand-green-400;
 }
 
 .checkbox-custom {

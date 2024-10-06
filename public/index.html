@@ -186,8 +186,14 @@
     <main>
       <div class="max-w-base mx-auto px-4 md:px-7">
         <!-- Hero -->
-        <section class="pt-5 lg:pt-30">
-          <div class="w-full aspect-video sm:aspect-[1110/400] overflow-hidden rounded-md">
+        <section
+          class="relative h-full flex items-center justify-center w-full aspect-video sm:aspect-[1110/400] overflow-hidden rounded-md mt-5 lg:mt-30 px-4">
+          <div class="relative max-w-xl text-center z-10">
+            <h1 class="text-white text-40 md:text-6xl lg:text-[5rem] leading-[1]">
+              Акционный баннер
+            </h1>
+          </div>
+          <div class="absolute h-full top-0 left-0 z-0">
             <img class="size-full object-cover" src="./img/image-hero__1.png" alt="image-hero__1">
           </div>
         </section>
@@ -772,7 +778,8 @@
             </div>
           </div>
           <!-- Main Wrapper -->
-          <div class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
+          <div
+            class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
             <!-- 1 -->
             <div class="w-1/2 sm:w-auto">
               <h5 class="font-semibold">Покупателям</h5>
