@@ -61,6 +61,25 @@ h3 {
 }
 
 
+
+/* Checkbox */
+.sort-checkbox-input:checked+.sort-checkbox-label .sort-checkbox-box {
+  @apply bg-brand-green-400 border-brand-green-400;
+}
+
+.sort-checkbox-input:checked+.sort-checkbox-label .sort-checkbox-box svg {
+  @apply block;
+}
+
+/* Radio */
+.sort-radio-input:checked+.sort-radio-label .sort-radio-box {
+  @apply border-brand-green-400;
+}
+
+.sort-radio-input:checked+.sort-radio-label .sort-radio-box span {
+  @apply block;
+}
+
 .toggle-button::after {
   height: calc(100% - 5px);
   @apply absolute left-[3px] top-1/2 -translate-y-1/2 w-1/2 rounded border border-[#33C445] transition-all content-[''] peer-checked:translate-x-full peer-checked:-left-[3px]

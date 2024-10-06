@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Modal 2</title>
+  </head>
+
+  <body>
+    <div class="absolute top-0 left-0 z-30 w-full min-h-screen bg-[#020202]/20 flex items-center justify-center xs:p-4">
+      <div class="relative w-full max-w-[35.25rem] bg-white rounded-md p-4 xs:p-3 mt-16 xs:mt-0">
+        <!-- Cart 1 -->
+        <div class="bg-white rounded-md p-4">
+          <div class="flex gap-4 mx-auto xs:mx-0">
+            <div class="flex flex-col md:flex-row space-x-2">
+              <input type="checkbox" id="select-1" class="cursor-pointer checkbox-custom">
+              <label for="select-1" class="cursor-pointer custom-label">
+                <div class="w-full min-w-[4.875rem] max-w-[7.5rem] aspect-square">
+                  <img class="size-full object-cover" src="./img/image-product__1.png" alt="Product Image">
+                </div>
+              </label>
+            </div>
+            <div>
+              <div>
+                <h5 class="font-semibold text-base line-clamp-1 sm:line-clamp-none">
+                  Navy Blue Габа Улун
+                </h5>
+                <ul class="md:space-y-2 mt-2">
+                  <li>
+                    <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Размер упаковки: <span
+                        class="text-brand-black-500">50
+                        г</span></p>
+                  </li>
+                  <li>
+                    <p class="text-brand-black-300 text-[0.625rem] md:text-sm/4">Тип доставки: <span
+                        class="text-brand-black-500">
+                        Под
+                        заказ</span></p>
+                  </li>
+                </ul>
+              </div>
+              <!-- Quantity Selector -->
+              <div class="w-max h-8 flex items-center text-center border rounded overflow-hidden !mt-4">
+                <button
+                  class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-r px-4 py-1">−</button>
+                <span class="w-42 text-15 px-2.5">2</span>
+                <button
+                  class="w-max text-brand-black-300 size-42 transition duration-200 hover:bg-gray-100 border-l px-4 py-1">+</button>
+              </div>
+            </div>
+            <div class="whitespace-nowrap flex flex-col items-end justify-between gap-5 ml-auto">
+              <div class="text-right">
+                <span class="text-sm/4 line-through text-brand-black-300">10 500 ₽</span>
+                <p class="font-semibold text-xl lg:text-2xl text-brand-black-400">8 999 ₽</p>
+              </div>
+              <button class="transition duration-200 hover:text-brand-green-400">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 5L4.5 20C4.5 21.1046 5.39543 22 6.5 22H17.5C18.6046 22 19.5 21.1046 19.5 20V5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path d="M10 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M14 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M2.5 5H21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  <path
+                    d="M7 5L7.22147 3.6712C7.3822 2.70683 8.21658 2 9.19425 2H12H14.8057C15.7834 2 16.6178 2.70683 16.7785 3.6712L17 5"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

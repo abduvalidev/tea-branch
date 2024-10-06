@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Register 3</title>
+  </head>
+
+  <body>
+    <div class="absolute z-30 w-full h-full bg-[#020202]/20 flex items-center justify-center p-4">
+      <div class="relative w-full max-w-350 bg-white rounded-md p-4 md:p-5 mt-16 xs:mt-0">
+        <h3>Авторизация</h3>
+        <form>
+          <div class="mt-5 pb-2.5">
+            <label class="text-brand-black-400 text-15">E-mail</label>
+            <!-- Promocode -->
+            <div class="relative mt-2">
+              <input type="text" id="register3-1"
+                class="peer w-full h-38 border border-gray-200 text-sm/6 text-brand-gray-400 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-2 px-2.5"
+                required />
+            </div>
+          </div>
+          <!-- Checkbox -->
+          <div class="mt-24">
+            <input type="checkbox" id="register3-sortBy" class="sort-checkbox-input hidden" />
+            <label for="register3-sortBy" class="sort-checkbox-label flex items-center gap-2 cursor-pointer">
+              <div
+                class="sort-checkbox-box w-5 h-5 shrink-0 grid place-content-center bg-white border border-brand-gray-400 rounded">
+                <svg width="10" height="7" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="hidden">
+                  <path d="M13 1.32617L5.81066 8.51551C5.22487 9.1013 4.27513 9.1013 3.68934 8.51551L1 5.82617"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="text-15 text-brand-gray-400">Запомнить меня</span>
+            </label>
+          </div>
+          <!-- Login -->
+          <button class="button-green w-full !rounded-md text-base/[1.125rem] px-4 py-2 mt-5">
+            Войти
+          </button>
+          <!-- -->
+          <div class="text-center text-15 border-t mt-5 pt-2 pb-0.5">
+            <a class="text-brand-dark transition duration-200 hover:opacity-80" href="#">У вас нет аккаунта?</a><br>
+            <a class="text-brand-green-400 transition duration-200 hover:opacity-80" href="#">Зарегистрироваться</a>
+          </div>
+        </form>
+
+        <!-- Exit Btn -->
+        <button class="absolute -top-9 right-0 xs:top-0 xs:-right-9">
+          <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.625 13.9564C15.0625 14.5213 15.0625 15.0862 14.625 15.6511C14.0938 16.1163 13.5625 16.1163 13.0313 15.6511L7.5 9.71963L1.92188 15.6511C1.39062 16.1163 0.859375 16.1163 0.328125 15.6511C-0.109375 15.0862 -0.109375 14.5213 0.328125 13.9564L5.90625 8.02492L0.328125 2.04361C-0.109375 1.47871 -0.109375 0.913811 0.328125 0.34891C0.859375 -0.116303 1.39062 -0.116303 1.92188 0.34891L7.5 6.33022L13.0781 0.398754C13.6094 -0.066459 14.1406 -0.066459 14.6719 0.398754C15.1094 0.963655 15.1094 1.52856 14.6719 2.09346L9.09375 8.02492L14.625 13.9564Z"
+              fill="#F7F7F7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+
+</html>
