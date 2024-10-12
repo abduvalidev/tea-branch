@@ -145,7 +145,8 @@
             <!-- Mobile Menu Bars -->
             <div class="flex lg:hidden items-center gap-3">
               <!-- Search -->
-              <button class="shrink-0 text-brand-black-400 transition duration-200 hover:text-brand-green-400">
+              <button
+                class="block md:hidden  shrink-0 text-brand-black-400 transition duration-200 hover:text-brand-green-400">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M14.375 8.125C14.375 7.00521 14.1016 5.96354 13.5547 5C12.9818 4.03646 12.2135 3.26823 11.25 2.69531C10.2604 2.14844 9.21875 1.875 8.125 1.875C7.03125 1.875 5.98958 2.14844 5 2.69531C4.03646 3.26823 3.26823 4.03646 2.69531 5C2.14844 5.96354 1.875 7.00521 1.875 8.125C1.875 9.24479 2.14844 10.2865 2.69531 11.25C3.26823 12.2135 4.03646 12.9818 5 13.5547C5.98958 14.1016 7.03125 14.375 8.125 14.375C9.21875 14.375 10.2604 14.1016 11.25 13.5547C12.2135 12.9818 12.9818 12.2135 13.5547 11.25C14.1016 10.2865 14.375 9.24479 14.375 8.125ZM13.1641 14.4922C11.7578 15.638 10.0781 16.224 8.125 16.25C5.83333 16.1979 3.91927 15.4036 2.38281 13.8672C0.846354 12.3307 0.0520833 10.4167 0 8.125C0.0520833 5.83333 0.846354 3.91927 2.38281 2.38281C3.91927 0.846354 5.83333 0.0520833 8.125 0C10.4167 0.0520833 12.3307 0.846354 13.8672 2.38281C15.4036 3.91927 16.1979 5.83333 16.25 8.125C16.224 10.0781 15.638 11.7578 14.4922 13.1641L19.7266 18.3984C20.0911 18.8411 20.0911 19.2839 19.7266 19.7266C19.2839 20.0911 18.8411 20.0911 18.3984 19.7266L13.1641 14.4922Z"
@@ -193,10 +194,9 @@
     <!-- MAIN -->
     <main>
       <section class="max-w-base mx-auto mt-6 px-4 md:px-7">
-        <div
-          class="w-full max-w-[43.625rem] lg:max-w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-30 mx-auto lg:mx-0">
+        <div class="w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-30 mx-auto lg:mx-0">
           <!-- Left -->
-          <div class="flex-1">
+          <div class="lg:flex-1">
             <h3>Корзина</h3>
             <div class="flex items-center gap-30 mt-4">
               <div class="cursor-pointer flex items-center space-x-2">
@@ -209,7 +209,7 @@
             </div>
 
             <!-- Carts -->
-            <div class="w-full max-w-[45.625rem] mt-6 space-y-2">
+            <div class="w-full mt-6 space-y-2">
               <!-- Cart 1 -->
               <div class="bg-white rounded-md p-4">
                 <div class="flex gap-4 mx-auto xs:mx-0">
@@ -398,73 +398,76 @@
           </div>
           <!-- Right -->
           <form class="bg-white w-full lg:max-w-350 h-max rounded-md px-4 py-5">
-            <!-- Top -->
-            <div>
-              <h4 class="font-medium text-xl lg:text-2xl">Ваша корзина</h4>
-              <ul class="mt-4 space-y-2">
-                <li class="flex items-center justify-between gap-4">
-                  <p class="text-brand-black-400 text-sm lg:text-base">Количество товаров:</p>
-                  <span class="font-semibold lg:text-lg">4 шт.</span>
-                </li>
-                <li class="flex items-center justify-between gap-4">
-                  <p class="text-brand-black-400 text-sm lg:text-base">Сумма товаров:</p>
-                  <span class="font-semibold lg:text-lg">1676 ₽</span>
-                </li>
-                <li class="flex items-center justify-between gap-4">
-                  <p class="text-brand-black-400 text-sm lg:text-base">Размер скидки:</p>
-                  <span class="font-semibold lg:text-lg">676 ₽</span>
-                </li>
-                <li class="flex items-center justify-between gap-4">
-                  <p class="text-brand-black-400 text-sm lg:text-base">Бонусов будет начислено</p>
-                  <span class="font-semibold lg:text-lg">342</span>
-                </li>
-              </ul>
-            </div>
-            <!-- Bottom -->
-            <div class="mt-4 lg:mt-6">
-              <div class="flex items-center justify-between gap-5">
-                <p class="text-sm lg:text-base text-brand-black-400">Итого к оплате: </p>
-                <span class="font-semibold text-xl lg:text-2xl">10 000 ₽</span>
+            <div class="w-full flex flex-col sm:flex-row lg:flex-col gap-5">
+              <!-- Top -->
+              <div class="w-full">
+                <h4 class="font-medium text-xl lg:text-2xl">Ваша корзина</h4>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center justify-between gap-4">
+                    <p class="text-brand-black-400 text-sm lg:text-base">Количество товаров:</p>
+                    <span class="font-semibold lg:text-lg">4 шт.</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4">
+                    <p class="text-brand-black-400 text-sm lg:text-base">Сумма товаров:</p>
+                    <span class="font-semibold lg:text-lg">1676 ₽</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4">
+                    <p class="text-brand-black-400 text-sm lg:text-base">Размер скидки:</p>
+                    <span class="font-semibold lg:text-lg">676 ₽</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4">
+                    <p class="text-brand-black-400 text-sm lg:text-base">Бонусов будет начислено</p>
+                    <span class="font-semibold lg:text-lg">342</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-5">
+                    <p class="text-sm lg:text-base text-brand-black-400">Итого к оплате: </p>
+                    <span class="font-semibold text-xl lg:text-2xl">10 000 ₽</span>
+                  </li>
+                </ul>
               </div>
-              <p class="font-semibold mt-5">Бонусные баллы</p>
-              <div class="h-20 flex gap-6 lg:gap-10 border rounded-md p-4 mt-4">
-                <div>
-                  <input type="radio" id="cart-radio-1" class="cart-radio hidden" checked name="cart-radio" />
-                  <label class="w-full flex gap-2 font-medium cursor-pointer rounded-lg" for="cart-radio-1">
-                    <div class="size-5 grid place-content-center border-[1.5px] border-brand-gray-400 rounded-full">
-                      <span class="size-2 hidden bg-brand-red rounded-full"></span>
-                    </div>
-                    <div>
-                      <p class="text-brand-black-500 font-medium">Получить</p>
-                      <span class="text-sm lg:text-base text-brand-gray-900">320 баллов</span>
-                    </div>
-                  </label>
+              <!-- Bottom -->
+              <div class="w-full">
+                <p class="font-semibold">Бонусные баллы</p>
+                <div class="w-full h-20 flex gap-6 lg:gap-10 border rounded-md p-4 mt-4">
+                  <div>
+                    <input type="radio" id="cart-radio-1" class="cart-radio hidden" checked name="cart-radio" />
+                    <label class="w-full flex gap-2 font-medium cursor-pointer rounded-lg" for="cart-radio-1">
+                      <div class="size-5 grid place-content-center border-[1.5px] border-brand-gray-400 rounded-full">
+                        <span class="size-2 hidden bg-brand-red rounded-full"></span>
+                      </div>
+                      <div>
+                        <p class="text-brand-black-500 font-medium">Получить</p>
+                        <span class="text-sm lg:text-base text-brand-gray-900">320 баллов</span>
+                      </div>
+                    </label>
+                  </div>
+                  <div>
+                    <input type="radio" id="cart-radio-2" class="cart-radio hidden" checked name="cart-radio" />
+                    <label class="w-full flex gap-2 font-medium cursor-pointer rounded-lg" for="cart-radio-2">
+                      <div class="size-5 grid place-content-center border-[1.5px] border-brand-gray-400 rounded-full">
+                        <span class="size-2 hidden bg-brand-red rounded-full"></span>
+                      </div>
+                      <div>
+                        <p class="text-brand-black-500 font-medium">Списать</p>
+                        <span class="text-sm lg:text-base text-brand-gray-900">320 баллов</span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-                <div>
-                  <input type="radio" id="cart-radio-2" class="cart-radio hidden" checked name="cart-radio" />
-                  <label class="w-full flex gap-2 font-medium cursor-pointer rounded-lg" for="cart-radio-2">
-                    <div class="size-5 grid place-content-center border-[1.5px] border-brand-gray-400 rounded-full">
-                      <span class="size-2 hidden bg-brand-red rounded-full"></span>
-                    </div>
-                    <div>
-                      <p class="text-brand-black-500 font-medium">Списать</p>
-                      <span class="text-sm lg:text-base text-brand-gray-900">320 баллов</span>
-                    </div>
+                <!-- Promocode -->
+                <div class="w-full flex items-center relative mt-5">
+                  <input type="text" id="phoneEmail"
+                    class="peer w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-3 px-2"
+                    required />
+                  <label for="phoneEmail"
+                    class="bg-white absolute left-4 top-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-9 peer-focus:scale-90 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-90 peer-focus:px-2">
+                    <span class="text-sm/6 text-brand-gray-400">Промокод</span>
                   </label>
+                  <img class="absolute right-2 size-4 lg:size-6" src="./img/icon-circle.svg" alt="">
                 </div>
+                <button class="button-green w-full lg:w-full h-max !rounded-md px-6 py-2 lg:py-3 mt-4">Оформить
+                  заказ</button>
               </div>
-              <!-- Promocode -->
-              <div class="flex items-center relative mt-5">
-                <input type="text" id="phoneEmail"
-                  class="peer w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 py-3 px-2"
-                  required />
-                <label for="phoneEmail"
-                  class="bg-white absolute left-4 top-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-9 peer-focus:scale-90 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-90 peer-focus:px-2">
-                  <span class="text-sm/6 text-brand-gray-400">Промокод</span>
-                </label>
-                <img class="absolute right-2 size-4 lg:size-6" src="./img/icon-circle.svg" alt="">
-              </div>
-              <button class="button-green w-full xs:w-max lg:w-full !rounded-md px-6 py-2 lg:py-3 mt-4">Оформить заказ</button>
             </div>
           </form>
         </div>
@@ -519,7 +522,8 @@
             </div>
           </div>
           <!-- Main Wrapper -->
-          <div class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
+          <div
+            class="w-full max-w-[40.1875rem] flex flex-col sm:flex-row sm:justify-between gap-5 text-brand-custom-gray">
             <!-- 1 -->
             <div class="w-1/2 sm:w-auto">
               <h5 class="font-semibold">Покупателям</h5>
