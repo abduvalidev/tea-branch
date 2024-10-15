@@ -4,58 +4,138 @@ const menuContent = document.querySelector('.mobile-menu__content');
 const toggleBtns = [document.querySelector('.menu-btn'), document.querySelector('.exit-btn')];
 
 if (mobileMenu && menuContent && toggleBtns.every(btn => btn)) {
-  toggleBtns.forEach(btn => btn.addEventListener('click', () => {
-    toggleBtns.forEach(b => b.classList.toggle('hidden')); 
-    mobileMenu.classList.toggle('hidden'); 
-    document.body.classList.toggle('overflow-hidden'); 
-  }));
+  toggleBtns.forEach(btn =>
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleBtns.forEach(b => b.classList.toggle('hidden'));
+      mobileMenu.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    })
+  );
 
   document.addEventListener('click', (event) => {
     const isClickInside = menuContent.contains(event.target) || toggleBtns.some(btn => btn.contains(event.target));
     if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
       mobileMenu.classList.add('hidden');
-      toggleBtns.forEach(b => b.classList.toggle('hidden')); 
+      toggleBtns.forEach(b => b.classList.toggle('hidden'));
       document.body.classList.remove('overflow-hidden');
     }
   });
 
-  menuContent.addEventListener('click', (event) => {
+  menuContent.addEventListener('click', (event) => event.stopPropagation());
+}
+
+// Search
+const searchInputs = document.querySelector('.search-input');
+const searchInputsModal = document.querySelector('.search-input__modal');
+const optionsResults = document.querySelector('.options-result');
+const optionsResultsModal = document.querySelector('.options-result__modal');
+const searchResult = document.querySelector('.search-result');
+const searchResultContent = document.querySelector('.search-result__content');
+const searchOpenBtns = document.querySelectorAll('.search-btn');
+const searchExitBtn = document.querySelector('.search-btn_exit');
+
+// Open search result
+searchOpenBtns.forEach(btn =>
+  btn.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevents click from bubbling up
+    searchResult.classList.toggle('hidden');
+    document.body.classList.toggle('overflow-hidden');
+  })
+);
+
+// Close search result
+searchExitBtn.addEventListener('click', () => {
+  searchResult.classList.add('hidden');
+  document.body.classList.remove('overflow-hidden');
+});
+
+// Hide search result
+document.addEventListener('click', (e) => {
+  const isClickInside = searchResultContent.contains(e.target) || [...searchOpenBtns].some(btn => btn.contains(e.target));
+  if (!isClickInside) {
+    searchResult.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  }
+});
+
+// Options
+function toggleOpts(input, options) {
+  input.addEventListener('click', (event) => {
+    options.classList.toggle('hidden');
     event.stopPropagation();
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const searchResult = document.querySelector('.search-result');
-  const searchResultContent = document.querySelector('.search-result__content'); 
-  const searchOpenBtn = document.querySelector('.search-btn'); 
-  const searchExitBtn = document.querySelector('.search-btn_exit');
+function hideOpts(input, options) {
+  document.addEventListener('click', (event) => {
+    if (!input.contains(event.target) && !options.contains(event.target)) {
+      options.classList.add('hidden');
+    }
+  });
+}
 
-  searchOpenBtn.addEventListener('click', () => {
-      searchResult.classList.remove('hidden'); 
-      searchOpenBtn.classList.add('hidden'); 
-      searchExitBtn.classList.remove('hidden'); 
-      document.body.classList.add('overflow-hidden');
+
+// Product Modal
+const productModal = document.querySelector('.product-modal');
+const productModalContent = document.querySelector('.product-modal__content');
+const productModalBtns = document.querySelectorAll('.product-modalBtn'); // Ikkita tugma
+const productExitBtn = document.querySelector('.product-exitBtn');
+
+if (productModal && productModalContent && productModalBtns.length > 0 && productExitBtn) {
+  const openProductModal = () => {
+    productModal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+  };
+
+  productModalBtns.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      openProductModal();
+    });
   });
 
-  searchExitBtn.addEventListener('click', () => {
-      searchResult.classList.add('hidden'); 
-      searchExitBtn.classList.add('hidden'); 
-      searchOpenBtn.classList.remove('hidden'); 
-      document.body.classList.remove('overflow-hidden'); 
+  productExitBtn.addEventListener('click', () => {
+    productModal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
   });
 
   document.addEventListener('click', (event) => {
-      const isClickInside = searchResultContent.contains(event.target) || searchOpenBtn.contains(event.target) || searchExitBtn.contains(event.target);
-
-      if (!isClickInside && !searchResult.classList.contains('hidden')) {
-          searchResult.classList.add('hidden'); 
-          searchExitBtn.classList.add('hidden'); 
-          searchOpenBtn.classList.remove('hidden'); 
-          document.body.classList.remove('overflow-hidden'); 
-      }
+    const isClickInside = productModalContent.contains(event.target) || [...productModalBtns].some(btn => btn.contains(event.target));
+    if (!isClickInside && !productModal.classList.contains('hidden')) {
+      productModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
   });
 
-  searchResultContent.addEventListener('click', (event) => {
-      event.stopPropagation();
-  });
+  productModalContent.addEventListener('click', (event) => event.stopPropagation());
+}
+
+
+
+// Initialize toggling
+toggleOpts(searchInputs, optionsResults);
+toggleOpts(searchInputsModal, optionsResultsModal);
+hideOpts(searchInputs, optionsResults);
+hideOpts(searchInputsModal, optionsResultsModal);
+// Dropdown content elements
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownContent = document.querySelector('.dropdown-content');
+const svgIcon = dropdownBtn.querySelector('.svg-icon'); // svg element
+
+// Open dropdown content and rotate svg
+dropdownBtn.addEventListener('click', (event) => {
+  event.stopPropagation();
+  dropdownContent.classList.toggle('hidden');
+  svgIcon.classList.toggle('rotate-180'); // Rotate the SVG icon
 });
+
+document.addEventListener('click', (e) => {
+  const isClickInside = dropdownContent.contains(e.target) || dropdownBtn.contains(e.target);
+  if (!isClickInside) {
+    dropdownContent.classList.add('hidden');
+    svgIcon.classList.remove('rotate-180'); // Remove rotation when clicked outside
+  }
+});
+
+dropdownContent.addEventListener('click', (event) => event.stopPropagation());

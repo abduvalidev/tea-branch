@@ -34,7 +34,9 @@ h3 {
 .button-green-outline {
   @apply border border-brand-black-200 rounded transition duration-200 hover:border-brand-black-400
 }
-
+.rotate svg {
+  @apply rotate-180 transition duration-300
+}
 /* Radio Input Styles */
 .cart-radio:checked+label div {
   @apply border-brand-green-400;
