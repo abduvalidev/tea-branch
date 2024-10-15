@@ -611,11 +611,20 @@ body{
 .pointer-events-none{
   pointer-events: none;
 }
+.visible{
+  visibility: visible;
+}
+.fixed{
+  position: fixed;
+}
 .absolute{
   position: absolute;
 }
 .relative{
   position: relative;
+}
+.inset-0{
+  inset: 0px;
 }
 .inset-y-0{
   top: 0px;
@@ -651,6 +660,12 @@ body{
 .top-1\/2{
   top: 50%;
 }
+.left-10{
+  left: 2.5rem;
+}
+.left-2{
+  left: 0.5rem;
+}
 .z-0{
   z-index: 0;
 }
@@ -663,6 +678,9 @@ body{
 .z-30{
   z-index: 30;
 }
+.z-50{
+  z-index: 50;
+}
 .order-last{
   order: 9999;
 }
@@ -673,6 +691,10 @@ body{
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+.\!mx-auto{
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .\!mt-4{
   margin-top: 1rem !important;
@@ -754,6 +776,12 @@ body{
 }
 .mt-8{
   margin-top: 2rem;
+}
+.\!mt-16{
+  margin-top: 4rem !important;
+}
+.\!mt-20{
+  margin-top: 5rem !important;
 }
 .line-clamp-1{
   overflow: hidden;
@@ -869,6 +897,10 @@ body{
 .size-8{
   width: 2rem;
   height: 2rem;
+}
+.size-\[1\.125rem\]{
+  width: 1.125rem;
+  height: 1.125rem;
 }
 .size-\[4\.875rem\]{
   width: 4.875rem;
@@ -1005,6 +1037,9 @@ body{
 }
 .min-w-\[4\.875rem\]{
   min-width: 4.875rem;
+}
+.max-w-2xl{
+  max-width: 42rem;
 }
 .max-w-350{
   max-width: 21.875rem;
@@ -2300,6 +2335,12 @@ h3{
   }
 
 
+  .xs\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
   .xs\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -2455,6 +2496,11 @@ h3{
   }
 
 
+  .md\:mt-20{
+    margin-top: 5rem;
+  }
+
+
   .md\:mt-4{
     margin-top: 1rem;
   }
@@ -2467,6 +2513,16 @@ h3{
 
   .md\:mt-6{
     margin-top: 1.5rem;
+  }
+
+
+  .md\:mt-16{
+    margin-top: 4rem;
+  }
+
+
+  .md\:mt-8{
+    margin-top: 2rem;
   }
 
 
@@ -2807,6 +2863,11 @@ h3{
   }
 
 
+  .lg\:ml-1{
+    margin-left: 0.25rem;
+  }
+
+
   .lg\:mt-10{
     margin-top: 2.5rem;
   }
@@ -2859,6 +2920,11 @@ h3{
 
   .lg\:mt-9{
     margin-top: 2.25rem;
+  }
+
+
+  .lg\:\!mt-20{
+    margin-top: 5rem !important;
   }
 
 
@@ -2991,6 +3057,11 @@ h3{
 
   .lg\:max-w-\[26\.875rem\]{
     max-width: 26.875rem;
+  }
+
+
+  .lg\:max-w-\[35\.25rem\]{
+    max-width: 35.25rem;
   }
 
 
