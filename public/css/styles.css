@@ -794,9 +794,6 @@ body{
 .grid{
   display: grid;
 }
-.contents{
-  display: contents;
-}
 .hidden{
   display: none;
 }
@@ -1829,6 +1826,22 @@ body{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out forwards, scaleIn 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 h2{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2370,11 +2383,6 @@ h3{
   }
 
 
-  .xs\:p-4{
-    padding: 1rem;
-  }
-
-
   .xs\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2387,16 +2395,6 @@ h3{
   }
 }
 @media (min-width: 640px){
-
-
-  .sm\:-right-9{
-    right: -2.25rem;
-  }
-
-
-  .sm\:top-0{
-    top: 0px;
-  }
 
 
   .sm\:mx-0{
@@ -3372,12 +3370,6 @@ h3{
 
   .lg\:text-15{
     font-size: 0.9375rem;
-    line-height: 1.375rem;
-  }
-
-
-  .lg\:text-22{
-    font-size: 1.375rem;
     line-height: 1.375rem;
   }
 

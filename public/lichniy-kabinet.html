@@ -1330,31 +1330,31 @@
       <section class="max-w-base mx-auto mt-6 px-4 md:px-7">
         <h2>Личный кабинет</h2>
         <!-- Orders -->
-        <div class="taps flex flex-col lg:flex-row gap-5 lg:gap-30 mt-6">
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-30 mt-6">
           <!-- Left -->
           <div class="h-max w-full lg:max-w-64 bg-white whitespace-nowrap overflow-x-auto no-scroll px-4 lg:px-0">
             <div class="flex lg:block w-full h-max rounded-md text-sm lg:text-base text-brand-gray-900 py-3">
-              <button class="tab-active" data-tab="Tab1">
+              <button class="tap-btn tab-active">
                 Мои заказы
               </button>
-              <button class="tab-noactive" data-tab="Tab2">
+              <button class="tap-btn tab-noactive">
                 Личные данные
               </button>
-              <button class="tab-noactive" data-tab="Tab3">
+              <button class="tap-btn tab-noactive">
                 Бонусные баллы
               </button>
-              <button class="tab-noactive" data-tab="Tab4">
+              <button class="tap-btn tab-noactive">
                 Избранное
               </button>
-              <button class="tab-noactive" data-tab="Tab5">
+              <button class="tap-btn tab-noactive">
                 Выйти
               </button>
             </div>
           </div>
           <!-- Taps Content -->
-          <div>
+          <div id="tab-contents" class="w-full">
             <!-- Tap 1 -->
-            <div class="tab-content active flex-1 bg-white rounded-md px-4 md:px-6 py-4">
+            <div class="tab-content flex-1 bg-white rounded-md px-4 md:px-6 py-4" id="tab2">
               <h3 class="text-[#1B1B1F] mb-0.5">История заказов</h3>
               <!-- Order 1 -->
               <div class="md:flex gap-4 lg:gap-x-6 border rounded-md p-4 md:px-5 md:py-6 mt-6 space-y-4 md:space-y-0">
@@ -1602,7 +1602,7 @@
               </div>
             </div>
             <!-- Tap 2 -->
-            <div class="tab-content hidden lg:flex-1 h-96 lg:h-[33rem] bg-white rounded-md px-4 md:px-6 py-4">
+            <div class="tab-content lg:flex-1 h-96 lg:h-[33rem] bg-white rounded-md px-4 md:px-6 py-4" id="tab2">
               <h3 class="text-[#1B1B1F] mb-0.5">История заказов</h3>
               <div class="text-center flex flex-col items-center justify-center gap-4 lg:gap-8 mt-20 lg:mt-40 pt-1">
                 <h3 class="lg:leading-[1.8rem]">Вы еще не сделали ни одного заказа</h3>
@@ -1613,7 +1613,7 @@
               </div>
             </div>
             <!-- Tap 3 -->
-            <div class="tab-content hidden lg:flex-1 bg-white rounded-md px-4 md:px-6 py-4 md:pb-6">
+            <div class="tab-content  lg:flex-1 bg-white rounded-md px-4 md:px-6 py-4 md:pb-6" id="tab3">
               <h3 class="text-[#1B1B1F] mb-0.5">Бонусные баллы</h3>
               <div class="mt-5">
                 <!-- Bonusov Nakopleno -->
@@ -1685,7 +1685,7 @@
               </div>
             </div>
             <!-- Tap 4 -->
-            <div class="tab-content hidden flex-1">
+            <div class="tab-content flex-1" id="tab4">
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-4 lg:gap-y-6 gap-x-4 lg:gap-x-30">
                 <!-- Item 1 -->
                 <div class="bg-white rounded-md px-2 md:px-4 py-3 lg:py-4 lg:pb-5">
@@ -1713,11 +1713,12 @@
                   <div class="mt-4">
                     <div class="flex gap-1">
                       <p class="font-semibold text-base/5 lg:text-2xl/6">1 450 ₽</p>
-                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850 ₽</span>
+                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850
+                        ₽</span>
                     </div>
                     <h5 class="font-semibold text-15 mt-2">Navy Blue Габа Улун</h5>
                     <p class="text-brand-dark text-13/[1.125rem]">Черный чай т.е. категория</p>
-    
+
                     <!-- Stars -->
                     <div class="flex mt-2 lg:mt-3">
                       <img class="shrink-0 size-2.5 lg:size-4" src="./img/icon-star__green.svg" alt="icon-star__green">
@@ -1755,11 +1756,12 @@
                   <div class="mt-4">
                     <div class="flex gap-1">
                       <p class="font-semibold text-base/5 lg:text-2xl/6">1 450 ₽</p>
-                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850 ₽</span>
+                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850
+                        ₽</span>
                     </div>
                     <h5 class="font-semibold text-15 mt-2">Navy Blue Габа Улун</h5>
                     <p class="text-brand-dark text-13/[1.125rem]">Черный чай т.е. категория</p>
-    
+
                     <!-- Stars -->
                     <div class="flex mt-2 lg:mt-3">
                       <img class="shrink-0 size-2.5 lg:size-4" src="./img/icon-star__green.svg" alt="icon-star__green">
@@ -1797,11 +1799,12 @@
                   <div class="mt-4">
                     <div class="flex gap-1">
                       <p class="font-semibold text-base/5 lg:text-2xl/6">1 450 ₽</p>
-                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850 ₽</span>
+                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850
+                        ₽</span>
                     </div>
                     <h5 class="font-semibold text-15 mt-2">Navy Blue Габа Улун</h5>
                     <p class="text-brand-dark text-13/[1.125rem]">Черный чай т.е. категория</p>
-    
+
                     <!-- Stars -->
                     <div class="flex mt-2 lg:mt-3">
                       <img class="shrink-0 size-2.5 lg:size-4" src="./img/icon-star__green.svg" alt="icon-star__green">
@@ -1839,11 +1842,12 @@
                   <div class="mt-4">
                     <div class="flex gap-1">
                       <p class="font-semibold text-base/5 lg:text-2xl/6">1 450 ₽</p>
-                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850 ₽</span>
+                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850
+                        ₽</span>
                     </div>
                     <h5 class="font-semibold text-15 mt-2">Navy Blue Габа Улун</h5>
                     <p class="text-brand-dark text-13/[1.125rem]">Черный чай т.е. категория</p>
-    
+
                     <!-- Stars -->
                     <div class="flex mt-2 lg:mt-3">
                       <img class="shrink-0 size-2.5 lg:size-4" src="./img/icon-star__green.svg" alt="icon-star__green">
@@ -1881,11 +1885,12 @@
                   <div class="mt-4">
                     <div class="flex gap-1">
                       <p class="font-semibold text-base/5 lg:text-2xl/6">1 450 ₽</p>
-                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850 ₽</span>
+                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850
+                        ₽</span>
                     </div>
                     <h5 class="font-semibold text-15 mt-2">Navy Blue Габа Улун</h5>
                     <p class="text-brand-dark text-13/[1.125rem]">Черный чай т.е. категория</p>
-    
+
                     <!-- Stars -->
                     <div class="flex mt-2 lg:mt-3">
                       <img class="shrink-0 size-2.5 lg:size-4" src="./img/icon-star__green.svg" alt="icon-star__green">
@@ -1923,11 +1928,12 @@
                   <div class="mt-4">
                     <div class="flex gap-1">
                       <p class="font-semibold text-base/5 lg:text-2xl/6">1 450 ₽</p>
-                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850 ₽</span>
+                      <span class="font-medium text-brand-black-300 line-through  text-xs/3 lg:text-base/4">1 850
+                        ₽</span>
                     </div>
                     <h5 class="font-semibold text-15 mt-2">Navy Blue Габа Улун</h5>
                     <p class="text-brand-dark text-13/[1.125rem]">Черный чай т.е. категория</p>
-    
+
                     <!-- Stars -->
                     <div class="flex mt-2 lg:mt-3">
                       <img class="shrink-0 size-2.5 lg:size-4" src="./img/icon-star__green.svg" alt="icon-star__green">
@@ -1942,7 +1948,7 @@
               </div>
             </div>
             <!-- Tap 5 -->
-            <div class="tab-content hidden lg:flex-1 bg-white rounded-md px-4 md:px-6 py-4 md:pb-6">
+            <div class="tab-content lg:flex-1 bg-white rounded-md px-4 md:px-6 py-4 md:pb-6" id="tab5">
               <h3 class="text-[#1B1B1F] mb-0.5">История заказов</h3>
               <div class="grid xs:grid-cols-2 gap-x-5 lg:gap-x-30 gap-y-5 mt-5">
                 <div>

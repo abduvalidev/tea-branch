@@ -144,5 +144,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 // Taps
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll('.tap-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      tabButtons.forEach(btn => {
+        btn.classList.remove('tab-active');
+        btn.classList.add('tab-noactive');
+      });
+
+      tabContents.forEach(content => {
+        content.classList.add('hidden');
+        content.classList.remove('active');
+      });
+
+      button.classList.add('tab-active');
+      button.classList.remove('tab-noactive');
+      tabContents[index].classList.remove('hidden');
+      tabContents[index].classList.add('active');
+    });
+  });
+
+  tabButtons[0].click();
+});
