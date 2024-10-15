@@ -34,13 +34,25 @@ h3 {
 .button-green-outline {
   @apply border border-brand-black-200 rounded transition duration-200 hover:border-brand-black-400
 }
+
 .rotate svg {
   @apply rotate-180 transition duration-300
 }
+
+.tab-active {
+  @apply block w-full text-left bg-brand-green-100 py-2 px-4;
+}
+
+.tab-noactive {
+  @apply block w-full text-left transition duration-200 hover:bg-brand-green-100 py-2 px-4;
+}
+
+
 /* Radio Input Styles */
 .cart-radio:checked+label div {
   @apply border-brand-green-400;
 }
+
 .cart-radio:checked+label div span {
   @apply block;
 }
@@ -54,6 +66,7 @@ h3 {
 .radio-dark:checked+label div {
   @apply border-brand-dark;
 }
+
 .radio-dark:checked+label div span {
   @apply block;
 }

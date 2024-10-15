@@ -118,24 +118,31 @@ toggleOpts(searchInputs, optionsResults);
 toggleOpts(searchInputsModal, optionsResultsModal);
 hideOpts(searchInputs, optionsResults);
 hideOpts(searchInputsModal, optionsResultsModal);
-// Dropdown content elements
-const dropdownBtn = document.querySelector('.dropdown-btn');
-const dropdownContent = document.querySelector('.dropdown-content');
-const svgIcon = dropdownBtn.querySelector('.svg-icon'); // svg element
 
-// Open dropdown content and rotate svg
-dropdownBtn.addEventListener('click', (event) => {
-  event.stopPropagation();
-  dropdownContent.classList.toggle('hidden');
-  svgIcon.classList.toggle('rotate-180'); // Rotate the SVG icon
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownBtn = document.querySelector('.dropdown-btn');
+  const dropdownContent = document.querySelector('.dropdown-content');
+  const svgIcon = dropdownBtn.querySelector('.svg-icon');
+
+  // Open dropdown content and rotate svg
+  dropdownBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    dropdownContent.classList.toggle('hidden');
+    svgIcon.classList.toggle('rotate-180');
+  });
+
+  document.addEventListener('click', (e) => {
+    const isClickInside = dropdownContent.contains(e.target) || dropdownBtn.contains(e.target);
+    if (!isClickInside) {
+      dropdownContent.classList.add('hidden');
+      svgIcon.classList.remove('rotate-180');
+    }
+  });
+
+  dropdownContent.addEventListener('click', (event) => event.stopPropagation());
 });
 
-document.addEventListener('click', (e) => {
-  const isClickInside = dropdownContent.contains(e.target) || dropdownBtn.contains(e.target);
-  if (!isClickInside) {
-    dropdownContent.classList.add('hidden');
-    svgIcon.classList.remove('rotate-180'); // Remove rotation when clicked outside
-  }
-});
 
-dropdownContent.addEventListener('click', (event) => event.stopPropagation());
+
+
+// Taps
