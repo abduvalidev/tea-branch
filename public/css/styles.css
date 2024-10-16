@@ -1407,10 +1407,6 @@ body{
   --tw-bg-opacity: 1;
   background-color: rgb(84 84 84 / var(--tw-bg-opacity));
 }
-.bg-brand-green-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 247 231 / var(--tw-bg-opacity));
-}
 .bg-brand-green-200{
   --tw-bg-opacity: 1;
   background-color: rgb(178 232 185 / var(--tw-bg-opacity));
@@ -1678,6 +1674,10 @@ body{
 .text-xs\/3{
   font-size: 0.75rem;
   line-height: .75rem;
+}
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .font-bold{
   font-weight: 700;
@@ -3470,6 +3470,12 @@ h3{
   }
 
 
+  .lg\:text-5xl\/6{
+    font-size: 3rem;
+    line-height: 1.5rem;
+  }
+
+
   .lg\:leading-\[1\.8rem\]{
     line-height: 1.8rem;
   }
@@ -3497,11 +3503,5 @@ h3{
   .dark\:text-gray-400{
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
-  }
-
-
-  .dark\:text-white{
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }

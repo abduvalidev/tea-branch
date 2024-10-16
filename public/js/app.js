@@ -46,7 +46,7 @@ searchOpenBtns.forEach(btn =>
 
 // Close search result
 searchExitBtn.addEventListener('click', () => {
-  searchResult.classList.add('hidden');
+  optionsResultsModal.classList.add('hidden');
   document.body.classList.remove('overflow-hidden');
 });
 
