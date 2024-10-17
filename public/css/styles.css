@@ -970,6 +970,9 @@ body{
 .max-h-\[32rem\]{
   max-height: 32rem;
 }
+.min-h-full{
+  min-height: 100%;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1628,10 +1631,6 @@ body{
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-.text-5xl\/6{
-  font-size: 3rem;
-  line-height: 1.5rem;
 }
 .text-\[0\.625rem\]{
   font-size: 0.625rem;
@@ -2367,6 +2366,11 @@ h3{
 
   .xs\:mt-14{
     margin-top: 3.5rem;
+  }
+
+
+  .xs\:mt-40{
+    margin-top: 10rem;
   }
 
 

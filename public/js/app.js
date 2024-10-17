@@ -112,3 +112,68 @@ if (productModal && productModalContent && productModalBtns.length > 0 && produc
     }
   });
 }
+
+
+// Login Modal
+const loginModal = document.querySelector('.login-modal');
+const loginContainer = document.querySelector('.login-container');
+const loginBtns = document.querySelectorAll('.login-btn');
+const loginExitBtn = document.querySelector('.login-exitBtn');
+const login = document.querySelector('.login');
+const forgotPasswordBtn = document.querySelector('.forgot-passwordBtn');
+const forgotPassword = document.querySelector('.forgot-password');
+const registerBtns = document.querySelectorAll('.register-btn');
+const register = document.querySelector('.register');
+
+if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
+  loginBtns.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      loginModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    });
+  });
+
+  loginExitBtn.addEventListener('click', () => {
+    loginModal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    login.classList.remove('hidden');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!loginContainer.contains(event.target) && loginModal.classList.contains('hidden') === false) {
+      loginModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      login.classList.remove('hidden');
+    }
+  });
+}
+
+
+// Login Step
+
+forgotPasswordBtn.addEventListener('click', () => {
+  login.classList.add('hidden');
+  forgotPassword.classList.remove('hidden');
+});
+
+registerBtns.forEach(btn => btn.addEventListener('click', () => {
+  login.classList.add('hidden');
+  register.classList.remove('hidden');
+  forgotPassword.classList.add('hidden');
+}));
+
+// Tashqariga bosilganda yashirish
+document.addEventListener('click', (event) => {
+  const isClickInside =
+    forgotPassword.contains(event.target) ||
+    register.contains(event.target) ||
+    forgotPasswordBtn.contains(event.target) ||
+    Array.from(registerBtns).some(btn => btn.contains(event.target));
+
+  if (!isClickInside) {
+    forgotPassword.classList.add('hidden');
+    register.classList.add('hidden');
+  }
+});
+
