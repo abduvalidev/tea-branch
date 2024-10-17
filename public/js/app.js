@@ -25,8 +25,7 @@ if (mobileMenu && menuContent && toggleBtns.every(btn => btn)) {
   menuContent.addEventListener('click', (event) => event.stopPropagation());
 }
 
-// Qidiruv funksiyasi
-const searchInputs = document.querySelectorAll('.search-input'); // Barcha search inputlarni olish
+const searchInputs = document.querySelectorAll('.search-input'); 
 const searchResult = document.querySelector('.search-result');
 const searchResultModal = document.querySelector('.search-result__content');
 const optionsResults = document.querySelectorAll('.options-result');
@@ -34,7 +33,6 @@ const searchOpenBtns = document.querySelectorAll('.search-btn');
 const searchExitBtn = document.querySelector('.search-btn_exit');
 const srchExitBtn = document.querySelector('.Search-exitBtn');
 
-// Qidiruv natijalarini ochish
 searchOpenBtns.forEach(btn =>
   btn.addEventListener('click', (event) => {
     event.stopPropagation();
