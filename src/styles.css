@@ -47,6 +47,12 @@ h3 {
   @apply block w-full text-left transition duration-200 hover:bg-brand-green-100 py-2 px-4;
 }
 
+.custom-password {
+  letter-spacing: 2px;
+  font-family: 'Arial', sans-serif;
+}
+
+
 .filter-content {
   @apply absolute lg:static -translate-x-full top-0 transition duration-300;
 }
@@ -83,7 +89,6 @@ h3 {
     transform: scale(1);
   }
 }
-
 
 /* Radio Input Styles */
 .cart-radio:checked+label div {

@@ -692,9 +692,6 @@ body{
 .-mr-2{
   margin-right: -0.5rem;
 }
-.-mt-5{
-  margin-top: -1.25rem;
-}
 .mb-0\.5{
   margin-bottom: 0.125rem;
 }
@@ -719,11 +716,17 @@ body{
 .ml-4{
   margin-left: 1rem;
 }
+.ml-8{
+  margin-left: 2rem;
+}
 .ml-9{
   margin-left: 2.25rem;
 }
 .ml-auto{
   margin-left: auto;
+}
+.mr-4{
+  margin-right: 1rem;
 }
 .mr-5{
   margin-right: 1.25rem;
@@ -936,9 +939,6 @@ body{
 .h-60{
   height: 15rem;
 }
-.h-72{
-  height: 18rem;
-}
 .h-8{
   height: 2rem;
 }
@@ -953,6 +953,9 @@ body{
 }
 .h-\[25\.875rem\]{
   height: 25.875rem;
+}
+.h-\[25rem\]{
+  height: 25rem;
 }
 .h-\[4\.75rem\]{
   height: 4.75rem;
@@ -969,6 +972,19 @@ body{
 }
 .max-h-\[32rem\]{
   max-height: 32rem;
+}
+.max-h-max{
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+.max-h-\[30rem\]{
+  max-height: 30rem;
+}
+.max-h-\[35rem\]{
+  max-height: 35rem;
+}
+.max-h-\[28\.125rem\]{
+  max-height: 28.125rem;
 }
 .min-h-full{
   min-height: 100%;
@@ -1952,6 +1968,12 @@ h3{
   background-color: rgb(229 247 231 / var(--tw-bg-opacity));
 }
 
+.custom-password {
+  letter-spacing: 2px;
+  font-family: 'Arial', sans-serif;
+}
+
+
 .filter-content{
   position: absolute;
   top: 0px;
@@ -1963,6 +1985,7 @@ h3{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+
 
 @media (min-width: 1024px){
 
@@ -2004,7 +2027,6 @@ h3{
     transform: scale(1);
   }
 }
-
 
 /* Radio Input Styles */
 .cart-radio:checked+label div{
@@ -2882,6 +2904,11 @@ h3{
   }
 
 
+  .md\:\!pt-12{
+    padding-top: 3rem !important;
+  }
+
+
   .md\:pb-6{
     padding-bottom: 1.5rem;
   }
@@ -3122,6 +3149,12 @@ h3{
   .lg\:h-max{
     height: -moz-max-content;
     height: max-content;
+  }
+
+
+  .lg\:min-h-min{
+    min-height: -moz-min-content;
+    min-height: min-content;
   }
 
 
@@ -3486,6 +3519,12 @@ h3{
   .lg\:text-40{
     font-size: 2.5rem;
     line-height: 3rem;
+  }
+
+
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
 

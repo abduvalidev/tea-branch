@@ -2100,13 +2100,16 @@
           </div>
           <!-- Filters -->
           <div
-            class="filters hidden lg:block lg:max-w-[15.9375rem] w-full fixed lg:static inset-0 z-30 bg-[#020202]/20 lg:bg-transparent overflow-y-auto">
+            class="filters hidden lg:block lg:max-w-[15.9375rem] w-full fixed lg:static inset-0 z-10 bg-[#020202]/20 lg:bg-transparent overflow-y-auto">
             <div
-              class="fade-left filter-content block max-w-80 w-full h-full lg:h-max bg-white text-[#2E2E2E] lg:rounded-md px-4 pt-6 pb-4 lg:pb-6">
-              <!-- Exit Btn -->
-              <button
-                class="filter-exit__btn block lg:hidden font-thin text-3xl lg:text-4xl/6 transition duration-200 hover:text-brand-green-400 ml-auto -mt-5">×</button>
-              <div class="h-72 overflow-y-auto card-scroll -mr-2 pr-2 mt-8 lg:mt-0">
+              class="fade-left filter-content block max-w-80 w-full h-full lg:h-max bg-white text-[#2E2E2E] lg:rounded-md px-4 pt-4 pb-4 lg:pb-6">
+              <div class="lg:hidden flex items-center justify-between">
+                <h3>Фильтры</h3>
+                <!-- Exit Btn -->
+                <button
+                  class="filter-exit__btn block text-3xl lg:text-4xl transition duration-200 hover:text-brand-green-400 ml-auto">×</button>
+              </div>
+              <div class="h-[25rem] overflow-y-auto card-scroll -mr-2 pr-2 mt-8 lg:mt-0">
                 <!-- Filter 1 -->
                 <div class="accordion-item">
                   <button class="accordion-button w-full flex items-center justify-between rounded-md pb-2">
@@ -2161,14 +2164,14 @@
                 <div class="accordion-item border-t mt-2 pt-2">
                   <button class="accordion-button w-full flex items-center justify-between rounded-md py-2">
                     <span class="font-semibold text-sm">Тип чая</span>
-                    <svg class="accordion-icon shrink-0 transition-transform duration-300 rotate-180" width="11"
+                    <svg class="accordion-icon shrink-0 transition-transform duration-300 rotate-0" width="11"
                       height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M5.12109 0.496094C5.30339 0.332031 5.51302 0.25 5.75 0.25C5.98698 0.25 6.19661 0.332031 6.37891 0.496094L10.7539 4.87109C10.918 5.05339 11 5.26302 11 5.5C11 5.73698 10.918 5.94661 10.7539 6.12891C10.5716 6.29297 10.362 6.375 10.125 6.375C9.88802 6.375 9.67839 6.29297 9.49609 6.12891L5.75 2.35547L2.00391 6.12891C1.82161 6.29297 1.61198 6.375 1.375 6.375C1.13802 6.375 0.928385 6.29297 0.746094 6.12891C0.582031 5.94661 0.5 5.73698 0.5 5.5C0.5 5.26302 0.582031 5.05339 0.746094 4.87109L5.12109 0.496094Z"
                         fill="#2E2E2E" />
                     </svg>
                   </button>
-                  <div class="accordion-content hidden space-y-2 mt-2">
+                  <div class="accordion-content space-y-2 mt-2">
                     <!-- 7 -->
                     <div class="w-max cursor-pointer flex items-center gap-2">
                       <input class="custom-checkbox" type="checkbox" id="test7" checked>
@@ -2187,14 +2190,14 @@
                 <div class="accordion-item border-t mt-2 pt-2">
                   <button class="accordion-button w-full flex items-center justify-between rounded-md py-2">
                     <span class="font-semibold text-sm">Наличие</span>
-                    <svg class="accordion-icon shrink-0 transition-transform duration-300 rotate-180" width="11"
+                    <svg class="accordion-icon shrink-0 transition-transform duration-300 rotate-0" width="11"
                       height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M5.12109 0.496094C5.30339 0.332031 5.51302 0.25 5.75 0.25C5.98698 0.25 6.19661 0.332031 6.37891 0.496094L10.7539 4.87109C10.918 5.05339 11 5.26302 11 5.5C11 5.73698 10.918 5.94661 10.7539 6.12891C10.5716 6.29297 10.362 6.375 10.125 6.375C9.88802 6.375 9.67839 6.29297 9.49609 6.12891L5.75 2.35547L2.00391 6.12891C1.82161 6.29297 1.61198 6.375 1.375 6.375C1.13802 6.375 0.928385 6.29297 0.746094 6.12891C0.582031 5.94661 0.5 5.73698 0.5 5.5C0.5 5.26302 0.582031 5.05339 0.746094 4.87109L5.12109 0.496094Z"
                         fill="#2E2E2E" />
                     </svg>
                   </button>
-                  <div class="accordion-content hidden space-y-2 mt-2">
+                  <div class="accordion-content space-y-2 mt-2">
                     <!-- 9 -->
                     <div class="w-max cursor-pointer flex items-center gap-2">
                       <input class="custom-checkbox" type="checkbox" id="test9" checked>
@@ -2420,16 +2423,7 @@
         const content = button.nextElementSibling;
         const icon = button.querySelector('.accordion-icon');
 
-        // Close all
-        accordionButtons.forEach(otherButton => {
-          const otherContent = otherButton.nextElementSibling;
-          const otherIcon = otherButton.querySelector('.accordion-icon');
-          if (otherButton !== button) {
-            otherContent.classList.add('hidden');
-          }
-        });
-
-        // Toggle the clicked
+        // Toggle the clicked accordion
         const isHidden = content.classList.toggle('hidden');
         icon.classList.toggle('rotate-0', !isHidden);
         icon.classList.toggle('rotate-180', isHidden);
