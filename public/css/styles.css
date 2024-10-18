@@ -620,6 +620,9 @@ body{
 .relative{
   position: relative;
 }
+.sticky{
+  position: sticky;
+}
 .inset-0{
   inset: 0px;
 }
@@ -2404,6 +2407,11 @@ h3{
 
   .xs\:-mr-2{
     margin-right: -0.5rem;
+  }
+
+
+  .xs\:mt-5{
+    margin-top: 1.25rem;
   }
 
 

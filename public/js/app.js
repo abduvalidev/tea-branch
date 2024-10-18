@@ -158,7 +158,7 @@ if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
       event.stopPropagation();
       loginModal.classList.remove('hidden');
       mobileMenu.classList.add('hidden');
-      toggleBtns.forEach(b => b.classList.toggle('hidden'));
+      // toggleBtns.forEach(b => b.classList.toggle('hidden'));
       document.body.classList.add('overflow-hidden');
     });
   });
