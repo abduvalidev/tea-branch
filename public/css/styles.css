@@ -909,6 +909,10 @@ body{
   width: 100%;
   height: 100%;
 }
+.size-30{
+  width: 1.875rem;
+  height: 1.875rem;
+}
 .h-10{
   height: 2.5rem;
 }
@@ -1457,6 +1461,18 @@ body{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-brand-green-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 247 231 / var(--tw-bg-opacity));
+}
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+.bg-green-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1724,8 +1740,17 @@ body{
 .font-thin{
   font-weight: 100;
 }
+.font-extralight{
+  font-weight: 200;
+}
 .leading-6{
   line-height: 1.5rem;
+}
+.leading-none{
+  line-height: 1;
+}
+.leading-\[0\]{
+  line-height: 0;
 }
 .tracking-wides{
   letter-spacing: -0.0125rem;
