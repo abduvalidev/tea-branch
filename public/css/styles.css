@@ -773,6 +773,12 @@ body{
 .mt-8{
   margin-top: 2rem;
 }
+.mr-2{
+  margin-right: 0.5rem;
+}
+.-mr-4{
+  margin-right: -1rem;
+}
 .line-clamp-1{
   overflow: hidden;
   display: -webkit-box;
@@ -2396,6 +2402,11 @@ h3{
   }
 
 
+  .xs\:-mr-2{
+    margin-right: -0.5rem;
+  }
+
+
   .xs\:flex{
     display: flex;
   }
@@ -2471,6 +2482,16 @@ h3{
   .xs\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+
+  .xs\:pr-4{
+    padding-right: 1rem;
+  }
+
+
+  .xs\:pr-3{
+    padding-right: 0.75rem;
   }
 }
 @media (min-width: 640px){
