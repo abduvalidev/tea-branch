@@ -51,9 +51,6 @@ if (mobileMenu && menuContent && toggleBtns.every(btn => btn)) {
       mobileMenu.classList.add('hidden');
       toggleBtns.forEach(b => b.classList.toggle('hidden'));
       document.body.classList.remove('overflow-hidden');
-    } else if (!mobileMenu.contains(event.target) && !toggleBtns.every(btn => btn.classList.contains('hidden'))) {
-      toggleBtns.forEach(b => b.classList.toggle('hidden'));
-      document.body.classList.add('overflow-hidden');
     }
   });
 
