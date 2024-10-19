@@ -201,7 +201,6 @@ if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
       event.stopPropagation();
       loginModal.classList.remove('hidden');
       mobileMenu.classList.add('hidden');
-      register.classList.add('hidden');
       login.classList.remove('hidden');
       toggleBtns.forEach(b => b.classList.toggle('hidden'));
       document.body.classList.add('overflow-hidden');
@@ -216,6 +215,8 @@ if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
         toggleBtns[0].classList.remove('hidden');
         toggleBtns[1].classList.add('hidden');
       }
+      register.classList.add('hidden');
+      login.classList.remove('hidden');
       loginModal.classList.remove('hidden');
       mobileMenu.classList.add('hidden');
       document.body.classList.add('overflow-hidden');
