@@ -16,12 +16,16 @@ const register = document.querySelector('.register');
 
 // Search Modal
 const searchInputs = document.querySelectorAll('.search-input');
+const intputGroup = document.querySelector('.input-group');
 const searchResult = document.querySelector('.search-result');
 const searchResultModal = document.querySelector('.search-result__content');
 const optionsResults = document.querySelector('.options-result');
-const searchInputModal = document.querySelector('.search-inputModal');
 const searchExitBtns = document.querySelectorAll('.search-btn_exit');
-const searchInputMobile = document.querySelector('.search-inputMobile')
+const searchInputMobile = document.querySelector('.search-inputMobile');
+const modalContent = document.querySelector('.modal-content')
+const searchResultInput = document.querySelector('.search-result__input');
+const menuIcon = document.querySelector('.menu-icon');
+const exitIcon = document.querySelector('.exit-icon');
 
 // Product Modal
 const productModal = document.querySelector('.product-modal');
@@ -61,9 +65,16 @@ if (mobileMenu && menuContent && toggleBtns.every(btn => btn)) {
 // Search Modal
 searchInputs.forEach(input => {
   input.addEventListener('click', (event) => {
+    modalContent.classList.remove('hidden');
+    intputGroup.classList.remove('relative', 'hidden');
+    searchResultInput.classList.remove('hidden');
+    menuIcon.classList.add('hidden');
+    exitIcon.classList.remove('hidden');
+    searchResultModal.classList.add('py-5', 'md:py-1');
+    intputGroup.classList.add('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
     event.stopPropagation();
     searchResult.classList.remove('hidden');
-    searchInputModal.classList.add('z-50');
+    // searchInputModal.classList.add('z-50');
     document.body.classList.add('overflow-hidden');
   });
 
@@ -90,11 +101,20 @@ searchExitBtns.forEach(searchExitBtn => {
         exitBtnClicked = true;
       } else {
         searchResult.classList.add('hidden');
+        modalContent.classList.add('hidden');
         document.body.classList.remove('overflow-hidden');
         exitBtnClicked = false;
       }
     } else {
+      searchResultInput.classList.add('hidden');
       searchResult.classList.add('hidden');
+      searchResult.classList.add('hidden');
+      searchResultModal.classList.remove('py-5', 'md:py-1');
+      modalContent.classList.add('hidden');
+      intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
+      intputGroup.classList.add('relative', 'hidden');
+      menuIcon.classList.remove('hidden');
+      exitIcon.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
       exitBtnClicked = false;
     }
@@ -119,19 +139,27 @@ document.addEventListener('click', function (event) {
 document.addEventListener('click', (event) => {
   if (!searchResultModal.contains(event.target) && !searchResult.classList.contains('hidden')) {
     searchResult.classList.add('hidden');
-    searchInputModal.classList.remove('z-50');
+    searchResultModal.classList.remove('py-5', 'md:py-1');
+    modalContent.classList.add('hidden');
+    intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
+    intputGroup.classList.add('relative', 'hidden');
+    searchResultInput.classList.add('hidden');
+    menuIcon.classList.remove('hidden');
+    exitIcon.classList.add('hidden');
+    // searchInputModal.classList.remove('z-50');
     document.body.classList.remove('overflow-hidden');
   }
 });
 
-// Product modal
 
+// Product modal
 if (productModal && productModalContent && productModalBtns.length > 0 && productExitBtn) {
   productModalBtns.forEach(btn => {
     btn.addEventListener('click', (event) => {
       event.stopPropagation();
       productModal.classList.remove('hidden');
       mobileMenu.classList.add('hidden');
+      toggleBtns.forEach(b => b.classList.toggle('hidden'));
       document.body.classList.add('overflow-hidden');
     });
   });
@@ -158,7 +186,7 @@ if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
       event.stopPropagation();
       loginModal.classList.remove('hidden');
       mobileMenu.classList.add('hidden');
-      // toggleBtns.forEach(b => b.classList.toggle('hidden'));
+      toggleBtns.forEach(b => b.classList.toggle('hidden'));
       document.body.classList.add('overflow-hidden');
     });
   });
@@ -239,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const eyeIcon = toggleButtons[index].querySelector('.eye-icon');
 
       if (isPasswordHidden) {
-        passwordInput.value = originalText; 
+        passwordInput.value = originalText;
         eyeIcon.querySelector('.eye-open').classList.add('hidden');
         eyeIcon.querySelector('.eye-closed').classList.remove('hidden');
       } else {
