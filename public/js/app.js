@@ -7,6 +7,7 @@ const toggleBtns = [document.querySelector('.menu-btn'), document.querySelector(
 const loginModal = document.querySelector('.login-modal');
 const loginContainer = document.querySelector('.login-container');
 const loginBtns = document.querySelectorAll('.login-btn');
+const loginBtnsMobile = document.querySelectorAll('.login-btnMobile');
 const loginExitBtn = document.querySelector('.login-exitBtn');
 const login = document.querySelector('.login');
 const forgotPasswordBtn = document.querySelector('.forgot-passwordBtn');
@@ -31,6 +32,7 @@ const exitIcon = document.querySelector('.exit-icon');
 const productModal = document.querySelector('.product-modal');
 const productModalContent = document.querySelector('.product-modal__content');
 const productModalBtns = document.querySelectorAll('.product-modalBtn');
+const productModalBtnsMobile = document.querySelectorAll('.product-modalBtnMobile');
 const productExitBtn = document.querySelector('.product-exitBtn');
 
 // Password visibility
@@ -108,7 +110,6 @@ searchExitBtns.forEach(searchExitBtn => {
     } else {
       searchResultInput.classList.add('hidden');
       searchResult.classList.add('hidden');
-      searchResult.classList.add('hidden');
       searchResultModal.classList.remove('py-5', 'md:py-1');
       modalContent.classList.add('hidden');
       intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
@@ -163,6 +164,20 @@ if (productModal && productModalContent && productModalBtns.length > 0 && produc
       document.body.classList.add('overflow-hidden');
     });
   });
+  productModalBtnsMobile.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      productModal.classList.remove('hidden');
+      mobileMenu.classList.add('hidden');
+      // Toggle Change
+      const isMenuHidden = mobileMenu.classList.contains('hidden');
+      if (isMenuHidden) {
+        toggleBtns[0].classList.remove('hidden');
+        toggleBtns[1].classList.add('hidden');
+      }
+      document.body.classList.add('overflow-hidden');
+    });
+  })
 
   productExitBtn.addEventListener('click', () => {
     productModal.classList.add('hidden');
@@ -190,7 +205,26 @@ if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
       document.body.classList.add('overflow-hidden');
     });
   });
+  loginBtnsMobile.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      // Toggle Change
+      const isMenuHidden = mobileMenu.classList.contains('hidden');
+      if (isMenuHidden) {
+        toggleBtns[0].classList.remove('hidden');
+        toggleBtns[1].classList.add('hidden');
+      }
+      loginModal.classList.remove('hidden');
+      mobileMenu.classList.add('hidden');
+      document.body.classList.add('overflow-hidden');
+    });
+  });
 
+  loginExitBtn.addEventListener('click', () => {
+    loginModal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    login.classList.remove('hidden');
+  });
   loginExitBtn.addEventListener('click', () => {
     loginModal.classList.add('hidden');
     document.body.classList.remove('overflow-hidden');
