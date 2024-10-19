@@ -3234,9 +3234,35 @@ h3{
   }
 
 
+  .lg\:h-auto{
+    height: auto;
+  }
+
+
+  .lg\:h-\[calc\(100\%-200px\)\]{
+    height: calc(100% - 200px);
+  }
+
+
+  .lg\:h-\[calc\(100vh-200px\)\]{
+    height: calc(100vh - 200px);
+  }
+
+
+  .lg\:h-\[calc\(100vh-500px\)\]{
+    height: calc(100vh - 500px);
+  }
+
+
   .lg\:min-h-min{
     min-height: -moz-min-content;
     min-height: min-content;
+  }
+
+
+  .lg\:min-h-max{
+    min-height: -moz-max-content;
+    min-height: max-content;
   }
 
 
