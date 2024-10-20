@@ -2187,21 +2187,22 @@
           </div>
           <!-- Filters -->
           <div
-            class="filters hidden lg:block lg:max-w-[15.9375rem] w-full fixed lg:static inset-0 z-10 bg-[#020202]/20 lg:bg-transparent overflow-y-auto">
+            class="filters hidden lg:block lg:max-w-[15.9375rem] w-full fixed lg:static inset-0 z-[20] bg-[#020202]/20 lg:bg-transparent overflow-y-auto">
             <div
-              class="fade-left filter-content block max-w-80 w-full min-h-full lg:h-max bg-white text-[#2E2E2E] lg:rounded-md px-4 pt-6 pb-4 lg:pb-6">
+              class="fade-left filter-content block max-w-80 w-full min-h-screen lg:min-h-max bg-white text-[#2E2E2E] lg:rounded-md px-4 pt-4 pb-4 lg:pb-6">
               <div class="lg:hidden flex items-center justify-between">
                 <h3>Фильтры</h3>
                 <!-- Exit Btn -->
                 <button
-                  class="filter-exit__btn size-30 flex items-center justify-center text-white text-3xl lg:text-4xl leading-[0] transition duration-200 hover:opacity-80 rounded-full bg-green-500">
+                  class="filter-exit__btn text-3xl lg:text-4xl leading-[0] transition duration-200 hover:text-brand-green-400">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
-              <div class="h-[25rem] overflow-y-auto card-scroll -mr-2 pr-2 mt-8 lg:mt-0">
+              <div
+                class="h-[calc(100vh-200px)] lg:h-[calc(100vh-450px)] overflow-y-auto card-scroll -mr-2 pr-2 mt-8 lg:mt-0">
                 <!-- Filter 1 -->
                 <div class="accordion-item">
                   <button class="accordion-button w-full flex items-center justify-between rounded-md pb-2">
