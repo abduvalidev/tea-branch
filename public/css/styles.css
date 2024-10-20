@@ -663,11 +663,14 @@ body{
 .top-0{
   top: 0px;
 }
+.top-1{
+  top: 0.25rem;
+}
 .top-1\/2{
   top: 50%;
 }
-.top-3{
-  top: 0.75rem;
+.top-1\.5{
+  top: 0.375rem;
 }
 .z-0{
   z-index: 0;
@@ -985,8 +988,14 @@ body{
 .h-\[7\.5625rem\]{
   height: 7.5625rem;
 }
+.h-\[calc\(100vh-17rem\)\]{
+  height: calc(100vh - 17rem);
+}
 .h-\[calc\(100vh-200px\)\]{
   height: calc(100vh - 200px);
+}
+.h-\[calc\(100vh-9\.5rem\)\]{
+  height: calc(100vh - 9.5rem);
 }
 .h-full{
   height: 100%;
@@ -995,44 +1004,35 @@ body{
   height: -moz-max-content;
   height: max-content;
 }
-.h-\[calc\(100vh-34\.5rem\)\]{
-  height: calc(100vh - 34.5rem);
+.h-\[calc\(100vh-9\.3rem\)\]{
+  height: calc(100vh - 9.3rem);
 }
-.h-\[calc\(100vh-14\.5rem\)\]{
-  height: calc(100vh - 14.5rem);
+.h-\[calc\(100vh-9\.8rem\)\]{
+  height: calc(100vh - 9.8rem);
 }
-.h-\[calc\(100vh-15\.5rem\)\]{
-  height: calc(100vh - 15.5rem);
+.h-\[calc\(100vh-9\.rem\)\]{
+  height: calc(100vh - 9.rem);
 }
-.h-\[calc\(100vh-16\.5rem\)\]{
-  height: calc(100vh - 16.5rem);
-}
-.h-\[calc\(100vh-16rem\)\]{
-  height: calc(100vh - 16rem);
-}
-.h-screen{
-  height: 100vh;
-}
-.h-\[calc\(100vh-6\.25rem\)\]{
-  height: calc(100vh - 6.25rem);
-}
-.h-\[calc\(100vh-7\.25rem\)\]{
-  height: calc(100vh - 7.25rem);
-}
-.h-\[calc\(100vh-8\.25rem\)\]{
-  height: calc(100vh - 8.25rem);
-}
-.h-\[calc\(100vh-10\.25rem\)\]{
-  height: calc(100vh - 10.25rem);
+.h-\[calc\(100vh-9\.9rem\)\]{
+  height: calc(100vh - 9.9rem);
 }
 .h-\[calc\(100vh-10rem\)\]{
   height: calc(100vh - 10rem);
 }
-.h-\[calc\(100vh-9rem\)\]{
-  height: calc(100vh - 9rem);
+.h-\[calc\(100vh-18rem\)\]{
+  height: calc(100vh - 18rem);
 }
-.h-\[calc\(100vh-9\.5rem\)\]{
-  height: calc(100vh - 9.5rem);
+.h-\[calc\(100vh-20rem\)\]{
+  height: calc(100vh - 20rem);
+}
+.h-\[calc\(100vh-16rem\)\]{
+  height: calc(100vh - 16rem);
+}
+.h-\[calc\(100vh-16\.5rem\)\]{
+  height: calc(100vh - 16.5rem);
+}
+.h-\[calc\(100vh-17\.5rem\)\]{
+  height: calc(100vh - 17.5rem);
 }
 .max-h-\[32rem\]{
   max-height: 32rem;
@@ -2446,11 +2446,6 @@ h3{
   }
 
 
-  .xs\:-mr-2{
-    margin-right: -0.5rem;
-  }
-
-
   .xs\:mt-0{
     margin-top: 0px;
   }
@@ -2728,6 +2723,11 @@ h3{
   }
 
 
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
+
   .md\:block{
     display: block;
   }
@@ -2787,13 +2787,43 @@ h3{
   }
 
 
-  .md\:h-\[2\.8125rem\]{
-    height: 2.8125rem;
+  .md\:h-\[31\.5625rem\]{
+    height: 31.5625rem;
   }
 
 
-  .md\:h-\[31\.5625rem\]{
-    height: 31.5625rem;
+  .md\:h-full{
+    height: 100%;
+  }
+
+
+  .md\:h-12{
+    height: 3rem;
+  }
+
+
+  .md\:h-\[calc\(100vh-19rem\)\]{
+    height: calc(100vh - 19rem);
+  }
+
+
+  .md\:h-\[calc\(100vh-20rem\)\]{
+    height: calc(100vh - 20rem);
+  }
+
+
+  .md\:h-\[calc\(100vh-25rem\)\]{
+    height: calc(100vh - 25rem);
+  }
+
+
+  .md\:h-\[calc\(100vh-16rem\)\]{
+    height: calc(100vh - 16rem);
+  }
+
+
+  .md\:h-\[calc\(100vh-15rem\)\]{
+    height: calc(100vh - 15rem);
   }
 
 
@@ -2986,15 +3016,15 @@ h3{
   }
 
 
-  .md\:py-1{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+
+  .md\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
 
@@ -3019,12 +3049,6 @@ h3{
   .md\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-
-  .md\:py-3{
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
   }
 
 
@@ -3283,6 +3307,31 @@ h3{
   .lg\:h-max{
     height: -moz-max-content;
     height: max-content;
+  }
+
+
+  .lg\:h-\[calc\(100vh-9\.5rem\)\]{
+    height: calc(100vh - 9.5rem);
+  }
+
+
+  .lg\:h-\[calc\(100vh-8rem\)\]{
+    height: calc(100vh - 8rem);
+  }
+
+
+  .lg\:h-\[calc\(100vh-10rem\)\]{
+    height: calc(100vh - 10rem);
+  }
+
+
+  .lg\:h-\[calc\(100vh-11rem\)\]{
+    height: calc(100vh - 11rem);
+  }
+
+
+  .lg\:h-\[calc\(100vh-10\.5rem\)\]{
+    height: calc(100vh - 10.5rem);
   }
 
 

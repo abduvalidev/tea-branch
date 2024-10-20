@@ -1,5 +1,6 @@
 // Mobil menyu
 const mobileMenu = document.querySelector('.mobile-menu');
+const menuLinks = mobileMenu.querySelectorAll('a');
 const menuContent = document.querySelector('.mobile-menu__content');
 const toggleBtns = [document.querySelector('.menu-btn'), document.querySelector('.exit-btn')];
 
@@ -18,6 +19,7 @@ const register = document.querySelector('.register');
 // Search Modal
 const searchInputs = document.querySelectorAll('.search-input');
 const intputGroup = document.querySelector('.input-group');
+const links = intputGroup.querySelectorAll('a');
 const searchResult = document.querySelector('.search-result');
 const searchResultModal = document.querySelector('.search-result__content');
 const optionsResults = document.querySelector('.options-result');
@@ -40,8 +42,7 @@ const inputs = document.querySelectorAll('.promo-input');
 const toggleButtons = document.querySelectorAll('.toggle-visibility');
 
 
-
-// Mobile Menu Hide
+// Mobile Menu
 if (mobileMenu && menuContent && toggleBtns.every(btn => btn)) {
   toggleBtns.forEach(btn =>
     btn.addEventListener('click', (event) => {
@@ -61,6 +62,14 @@ if (mobileMenu && menuContent && toggleBtns.every(btn => btn)) {
   });
 
   menuContent.addEventListener('click', (event) => event.stopPropagation());
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      toggleBtns.forEach(b => b.classList.toggle('hidden'));
+      mobileMenu.classList.add('hidden'); 
+      document.body.classList.remove('overflow-hidden');
+    });
+  });
 }
 
 
@@ -73,7 +82,7 @@ searchInputs.forEach(input => {
     menuIcon.classList.add('hidden');
     exitIcon.classList.remove('hidden');
     searchResultModal.classList.add('py-5', 'md:py-3');
-    intputGroup.classList.add('absolute', 'z-50', 'left-1/2', '-translate-x-1/2',);
+    intputGroup.classList.add('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-1.5');
     event.stopPropagation();
     searchResult.classList.remove('hidden');
     // searchInputModal.classList.add('z-50');
@@ -112,7 +121,7 @@ searchExitBtns.forEach(searchExitBtn => {
       searchResult.classList.add('hidden');
       searchResultModal.classList.remove('py-5', 'md:py-3');
       modalContent.classList.add('hidden');
-      intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2',);
+      intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-1.5');
       intputGroup.classList.add('relative', 'hidden');
       menuIcon.classList.remove('hidden');
       exitIcon.classList.add('hidden');
@@ -121,6 +130,28 @@ searchExitBtns.forEach(searchExitBtn => {
     }
   });
 });
+
+// Link
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    searchInputs.forEach(input => {
+      input.value = ''; 
+    });
+
+    if (!searchResult.classList.contains('hidden')) {
+      searchResult.classList.add('hidden');
+      searchResultModal.classList.remove('py-5', 'md:py-3');
+      modalContent.classList.add('hidden');
+      intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-1.5');
+      intputGroup.classList.add('relative', 'hidden');
+      searchResultInput.classList.add('hidden');
+      menuIcon.classList.remove('hidden');
+      exitIcon.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+});
+
 
 document.addEventListener('click', function (event) {
   let isClickInside = false;
@@ -142,7 +173,7 @@ document.addEventListener('click', (event) => {
     searchResult.classList.add('hidden');
     searchResultModal.classList.remove('py-5', 'md:py-3');
     modalContent.classList.add('hidden');
-    intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2',);
+    intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-1.5');
     intputGroup.classList.add('relative', 'hidden');
     searchResultInput.classList.add('hidden');
     menuIcon.classList.remove('hidden');
