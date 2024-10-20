@@ -654,6 +654,9 @@ body{
 .right-2\.5{
   right: 0.625rem;
 }
+.right-5{
+  right: 1.25rem;
+}
 .start-0{
   inset-inline-start: 0px;
 }
@@ -665,12 +668,6 @@ body{
 }
 .top-3{
   top: 0.75rem;
-}
-.right-4{
-  right: 1rem;
-}
-.right-5{
-  right: 1.25rem;
 }
 .z-0{
   z-index: 0;
@@ -752,6 +749,9 @@ body{
 .mt-10{
   margin-top: 2.5rem;
 }
+.mt-12{
+  margin-top: 3rem;
+}
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -790,9 +790,6 @@ body{
 }
 .mt-8{
   margin-top: 2rem;
-}
-.mt-12{
-  margin-top: 3rem;
 }
 .line-clamp-1{
   overflow: hidden;
@@ -997,6 +994,21 @@ body{
 .h-max{
   height: -moz-max-content;
   height: max-content;
+}
+.h-\[calc\(100vh-34\.5rem\)\]{
+  height: calc(100vh - 34.5rem);
+}
+.h-\[calc\(100vh-14\.5rem\)\]{
+  height: calc(100vh - 14.5rem);
+}
+.h-\[calc\(100vh-15\.5rem\)\]{
+  height: calc(100vh - 15.5rem);
+}
+.h-\[calc\(100vh-16\.5rem\)\]{
+  height: calc(100vh - 16.5rem);
+}
+.h-\[calc\(100vh-16rem\)\]{
+  height: calc(100vh - 16rem);
 }
 .max-h-\[32rem\]{
   max-height: 32rem;
@@ -2461,13 +2473,13 @@ h3{
   }
 
 
-  .xs\:max-w-\[16\.375rem\]{
-    max-width: 16.375rem;
+  .xs\:max-w-350{
+    max-width: 21.875rem;
   }
 
 
-  .xs\:max-w-350{
-    max-width: 21.875rem;
+  .xs\:max-w-\[16\.375rem\]{
+    max-width: 16.375rem;
   }
 
 
@@ -2986,6 +2998,12 @@ h3{
   }
 
 
+  .md\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+
   .md\:pb-6{
     padding-bottom: 1.5rem;
   }
@@ -3233,24 +3251,14 @@ h3{
   }
 
 
-  .lg\:h-\[calc\(100vh-500px\)\]{
-    height: calc(100vh - 500px);
+  .lg\:h-\[calc\(100vh-450px\)\]{
+    height: calc(100vh - 450px);
   }
 
 
   .lg\:h-max{
     height: -moz-max-content;
     height: max-content;
-  }
-
-
-  .lg\:h-\[calc\(100vh-400px\)\]{
-    height: calc(100vh - 400px);
-  }
-
-
-  .lg\:h-\[calc\(100vh-450px\)\]{
-    height: calc(100vh - 450px);
   }
 
 

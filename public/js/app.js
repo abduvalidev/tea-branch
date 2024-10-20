@@ -72,7 +72,7 @@ searchInputs.forEach(input => {
     searchResultInput.classList.remove('hidden');
     menuIcon.classList.add('hidden');
     exitIcon.classList.remove('hidden');
-    searchResultModal.classList.add('py-5', 'md:py-1');
+    searchResultModal.classList.add('py-5', 'md:py-3');
     intputGroup.classList.add('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
     event.stopPropagation();
     searchResult.classList.remove('hidden');
@@ -110,7 +110,7 @@ searchExitBtns.forEach(searchExitBtn => {
     } else {
       searchResultInput.classList.add('hidden');
       searchResult.classList.add('hidden');
-      searchResultModal.classList.remove('py-5', 'md:py-1');
+      searchResultModal.classList.remove('py-5', 'md:py-3');
       modalContent.classList.add('hidden');
       intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
       intputGroup.classList.add('relative', 'hidden');
@@ -140,7 +140,7 @@ document.addEventListener('click', function (event) {
 document.addEventListener('click', (event) => {
   if (!searchResultModal.contains(event.target) && !searchResult.classList.contains('hidden')) {
     searchResult.classList.add('hidden');
-    searchResultModal.classList.remove('py-5', 'md:py-1');
+    searchResultModal.classList.remove('py-5', 'md:py-3');
     modalContent.classList.add('hidden');
     intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
     intputGroup.classList.add('relative', 'hidden');
