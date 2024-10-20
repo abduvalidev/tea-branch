@@ -73,7 +73,7 @@ searchInputs.forEach(input => {
     menuIcon.classList.add('hidden');
     exitIcon.classList.remove('hidden');
     searchResultModal.classList.add('py-5', 'md:py-3');
-    intputGroup.classList.add('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
+    intputGroup.classList.add('absolute', 'z-50', 'left-1/2', '-translate-x-1/2',);
     event.stopPropagation();
     searchResult.classList.remove('hidden');
     // searchInputModal.classList.add('z-50');
@@ -112,7 +112,7 @@ searchExitBtns.forEach(searchExitBtn => {
       searchResult.classList.add('hidden');
       searchResultModal.classList.remove('py-5', 'md:py-3');
       modalContent.classList.add('hidden');
-      intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
+      intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2',);
       intputGroup.classList.add('relative', 'hidden');
       menuIcon.classList.remove('hidden');
       exitIcon.classList.add('hidden');
@@ -142,7 +142,7 @@ document.addEventListener('click', (event) => {
     searchResult.classList.add('hidden');
     searchResultModal.classList.remove('py-5', 'md:py-3');
     modalContent.classList.add('hidden');
-    intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2', 'top-3');
+    intputGroup.classList.remove('absolute', 'z-50', 'left-1/2', '-translate-x-1/2',);
     intputGroup.classList.add('relative', 'hidden');
     searchResultInput.classList.add('hidden');
     menuIcon.classList.remove('hidden');
@@ -194,7 +194,6 @@ if (productModal && productModalContent && productModalBtns.length > 0 && produc
 
 
 // Login Modal
-
 if (loginModal && loginContainer && loginBtns.length > 0 && loginExitBtn) {
   loginBtns.forEach(btn => {
     btn.addEventListener('click', (event) => {
