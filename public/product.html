@@ -1611,26 +1611,29 @@
           <div>
             <button class="button-green text-xs md:text-sm/4 text-brand-black-100 px-2.5 py-1.5">Популярный</button>
             <div class="xs:flex lg:flex-col">
-              <div class="max-w-[27.8125rem] w-full aspect-[445/362] overflow-hidden mt-5 mx-auto">
-                <img class="size-full object-cover" src="./img/image-product__2.png" alt="Product 2">
+              <div id="largeImages" class="max-w-[27.8125rem] w-full aspect-[445/362] overflow-hidden mt-5 mx-auto">
+                <img class="large-image hidden size-full object-cover" src="./img/image-product__2.png" alt="Product 2">
+                <img class="large-image hidden size-full object-cover" src="./img/image-product__1.png" alt="Product 2">
+                <img class="large-image hidden size-full object-cover" src="./img/image-product__2.png" alt="Product 2">
+                <img class="large-image hidden size-full object-cover" src="./img/image-product__1.png" alt="Product 2">
               </div>
               <div class="flex xs:flex-col lg:flex-row justify-center gap-2.5 mt-4 xs:mt-0 lg:mt-12">
-                <button
-                  class="size-12 md:size-sixty border border-brand-black-200 transition duration-200 hover:border-brand-black-200 rounded-md p-1">
+                <div
+                  class="cursor-pointer thumbnail size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
                   <img class="size-full" src="./img/icon-product__2.svg" alt="icon-product__2">
-                </button>
-                <button
-                  class="size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
+                </div>
+                <div
+                  class="cursor-pointer thumbnail size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
+                  <img class="size-full" src="./img/image-product__1.png" alt="icon-product__2">
+                </div>
+                <div
+                  class="cursor-pointer thumbnail size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
                   <img class="size-full" src="./img/icon-product__2.svg" alt="icon-product__2">
-                </button>
-                <button
-                  class="size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
-                  <img class="size-full" src="./img/icon-product__2.svg" alt="icon-product__2">
-                </button>
-                <button
-                  class="size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
-                  <img class="size-full" src="./img/icon-product__2.svg" alt="icon-product__2">
-                </button>
+                </div>
+                <div
+                  class="cursor-pointer thumbnail size-12 md:size-sixty border border-transparent transition duration-200 hover:border-brand-black-200 rounded-md p-1">
+                  <img class="size-full" src="./img/image-product__1.png" alt="icon-product__2">
+                </div>
               </div>
             </div>
           </div>
@@ -2765,7 +2768,7 @@
     </div>
   </main>
   <!-- FOOTER -->
-  <footer class="max-w-base mx-auto px-4 md:px-7 pb-4 mt-10 lg:mt-14">
+  <footer class="max-w-base  mx-auto px-4 md:px-7 pb-4 mt-10 lg:mt-14">
     <div class="bg-white rounded-md p-4 md:p-6 lg:p-0 lg:px-30 lg:pt-14 lg:pb-6">
       <!-- Logo  -->
       <div>
@@ -2855,6 +2858,25 @@
 
   <script src="./js/app.js"></script>
   <script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const largeImages = document.querySelectorAll('.large-image');
+
+    largeImages[0].classList.remove('hidden');
+    thumbnails[0].classList.add('border-green-400');
+    thumbnails[0].classList.remove('hover:border-brand-black-200');
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => {
+        largeImages.forEach(image => image.classList.add('hidden'));
+        thumbnails.forEach(thumb => thumb.classList.remove('border-green-400'));
+        thumbnails.forEach(thumb => thumb.classList.add('hover:border-brand-black-200'));
+
+        largeImages[index].classList.remove('hidden');
+        thumbnail.classList.add('border-green-400');
+        thumbnail.classList.remove('hover:border-brand-black-200');
+      });
+    });
+
     const ctx = document.getElementById('myRadarChart').getContext('2d');
     const myRadarChart = new Chart(ctx, {
       type: 'radar',
